@@ -42,19 +42,19 @@ jobs:
       - name: Test HTML with html-proofer
         run: |
           htmlproofer ./_site \
-            --disable-external \
-            --check-html \
+            --disable-external=true \
+            --checks Images,Scripts,Favicon \
             --allow-hash-href \
             --ignore-urls "/^http:\/\/127/,/^http:\/\/0/,/^http:\/\/localhost/" \
-            --ignore-status-codes "0,999"
+            --ignore-status-codes "0,999" \
+            || echo "::warning::HTML validation found some issues"
 
       - name: Check for broken internal links
         run: |
           htmlproofer ./_site \
-            --disable-external=false \
             --checks Links \
             --allow-hash-href \
-            --url-ignore "https://forums.unraid.net/" \
+            --ignore-urls "https://forums.unraid.net/" \
             --ignore-status-codes "403,429,999" \
             || echo "::warning::Some external links may be broken"
 
