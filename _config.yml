@@ -1,6 +1,8 @@
 theme: jekyll-theme-cayman
 title: N85UK UNRAID Applications
 description: Production-ready Docker applications for UNRAID servers
+url: "https://apps.n85.uk"
+baseurl: ""
 show_downloads: false
 plugins:
   - jekyll-relative-links
