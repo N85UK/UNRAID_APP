@@ -63,10 +63,10 @@ lang: en-GB
     <span class="badge badge-cloud">AWS SNS</span>
   </div>
 
-  ### � Prerequisites
+  ### 📋 Prerequisites
   Before installing, ensure you have:
   - ✅ UNRAID 6.9+ (6.12+ recommended)
-  - ✅ PostgreSQL database (can be another Docker container)
+  - ✅ **PostgreSQL 15+ database** - Run as separate UNRAID container (recommended) or use included docker-compose setup
   - ✅ AWS account with SNS configured (optional, for notifications)
   - ✅ Network access for webhooks (port 8000 default)
   - ✅ 512MB RAM minimum (1GB recommended)
