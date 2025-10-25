@@ -34,26 +34,30 @@ lang: en-GB
     </div>
   </div>
 
-  ### 🎯 What It Does
-  Transform any webhook into actionable alerts. Monitor your UniFi Protect cameras, process GitHub events, or handle custom webhooks with powerful transformation, validation, and routing capabilities.
+  <h3>🎯 What It Does</h3>
+  <p>Transform any webhook into actionable alerts. Monitor your UniFi Protect cameras, process GitHub events, or handle custom webhooks with powerful transformation, validation, and routing capabilities.</p>
 
-  ### ✨ Key Features
-  - 🔔 **UniFi Protect Integration** - Smart detection alerts for person, vehicle, and package detection
-  - 🔄 **Universal Webhook Transform** - Map any JSON payload to your desired format
-  - 📊 **Real-time Dashboard** - React-based UI for monitoring and managing webhooks
-  - 🔐 **HMAC Signature Verification** - Secure webhook validation with multiple algorithms
-  - 📱 **AWS SNS/SMS Notifications** - Send alerts via SMS, email, or push notifications
-  - 🗄️ **PostgreSQL Event Storage** - Persistent storage with full search and filtering
-  - 🎨 **Custom Field Mapping** - Extract, transform, and route specific data fields
-  - 📈 **Event Analytics** - Track webhook performance and patterns
+  <h3>✨ Key Features</h3>
+  <ul>
+    <li>🔔 <strong>UniFi Protect Integration</strong> - Smart detection alerts for person, vehicle, and package detection</li>
+    <li>🔄 <strong>Universal Webhook Transform</strong> - Map any JSON payload to your desired format</li>
+    <li>📊 <strong>Real-time Dashboard</strong> - React-based UI for monitoring and managing webhooks</li>
+    <li>🔐 <strong>HMAC Signature Verification</strong> - Secure webhook validation with multiple algorithms</li>
+    <li>📱 <strong>AWS SNS/SMS Notifications</strong> - Send alerts via SMS, email, or push notifications</li>
+    <li>🗄️ <strong>PostgreSQL Event Storage</strong> - Persistent storage with full search and filtering</li>
+    <li>🎨 <strong>Custom Field Mapping</strong> - Extract, transform, and route specific data fields</li>
+    <li>📈 <strong>Event Analytics</strong> - Track webhook performance and patterns</li>
+  </ul>
 
-  ### 💡 Real-World Use Cases
-  - **Home Security**: Get instant SMS alerts when your security cameras detect a person at your door
-  - **DevOps Monitoring**: Route GitHub deployment webhooks to your team's Slack channel
-  - **IoT Integration**: Process sensor data from smart home devices and trigger automated actions
-  - **Business Automation**: Transform customer form submissions into CRM entries
+  <h3>💡 Real-World Use Cases</h3>
+  <ul>
+    <li><strong>Home Security</strong>: Get instant SMS alerts when your security cameras detect a person at your door</li>
+    <li><strong>DevOps Monitoring</strong>: Route GitHub deployment webhooks to your team's Slack channel</li>
+    <li><strong>IoT Integration</strong>: Process sensor data from smart home devices and trigger automated actions</li>
+    <li><strong>Business Automation</strong>: Transform customer form submissions into CRM entries</li>
+  </ul>
 
-  ### 🛠️ Tech Stack
+  <h3>🛠️ Tech Stack</h3>
   <div class="tech-stack">
     <span class="badge badge-python">Python 3.11</span>
     <span class="badge badge-framework">FastAPI</span>
@@ -63,60 +67,61 @@ lang: en-GB
     <span class="badge badge-cloud">AWS SNS</span>
   </div>
 
-  ### 📋 Prerequisites
-  Before installing, ensure you have:
-  - ✅ UNRAID 6.9+ (6.12+ recommended)
-  - ✅ **PostgreSQL 15+ database** - Run as separate UNRAID container (recommended) or use included docker-compose setup
-  - ✅ AWS account with SNS configured (optional, for notifications)
-  - ✅ Network access for webhooks (port 8000 default)
-  - ✅ 512MB RAM minimum (1GB recommended)
+  <h3>📋 Prerequisites</h3>
+  <p>Before installing, ensure you have:</p>
+  <ul>
+    <li>✅ UNRAID 6.9+ (6.12+ recommended)</li>
+    <li>✅ <strong>PostgreSQL 15+ database</strong> - Run as separate UNRAID container (recommended) or use included docker-compose setup</li>
+    <li>✅ AWS account with SNS configured (optional, for notifications)</li>
+    <li>✅ Network access for webhooks (port 8000 default)</li>
+    <li>✅ 512MB RAM minimum (1GB recommended)</li>
+  </ul>
 
-  ### 🏗️ Architecture
-  ```
-  Webhook Source → HMAC Verification → Transform Engine → Storage
+  <h3>🏗️ Architecture</h3>
+  <pre><code>Webhook Source → HMAC Verification → Transform Engine → Storage
                                               ↓
                                          Alert Rules
                                               ↓
                                       SNS/SMS/Email
-  ```
+</code></pre>
 
-  ### 🎬 Quick Start
-  ```bash
-  # 1. Pull the latest image
-  docker pull ghcr.io/n85uk/x-webhook-receiver:latest
-  
-  # 2. Set required environment variables
-  DATABASE_URL=postgresql://user:pass@host:5432/webhooks
-  AWS_REGION=us-east-1  # Optional for SNS
-  
-  # 3. Deploy via UNRAID template (see below)
-  ```
+  <h3>🎬 Quick Start</h3>
+  <pre><code class="language-bash"># 1. Pull the latest image
+docker pull ghcr.io/n85uk/x-webhook-receiver:latest
 
-  ### 📦 Installation
+# 2. Set required environment variables
+DATABASE_URL=postgresql://user:pass@host:5432/webhooks
+AWS_REGION=us-east-1  # Optional for SNS
+
+# 3. Deploy via UNRAID template (see below)
+</code></pre>
+
+  <h3>📦 Installation</h3>
   <div class="install-buttons">
     <a href="https://github.com/N85UK/UNRAID_APP/blob/main/templates/x-webhook-receiver.xml" class="btn btn-primary">📥 Download Template</a>
     <a href="https://github.com/N85UK/UNRAID_APP/wiki/X-Webhook-Receiver-Setup" class="btn btn-secondary">📖 Setup Guide</a>
     <a href="https://github.com/N85UK/UNRAID_APP/wiki/X-Webhook-Receiver-API" class="btn btn-tertiary">🔌 API Docs</a>
   </div>
 
-  ### 🔗 Links
-  - **Source Code**: [GitHub Repository](https://github.com/N85UK/UNRAID_Apps/tree/main/Apps/X_Webhook-Receiver)
-  - **Docker Image**: [ghcr.io/n85uk/x-webhook-receiver](https://github.com/N85UK/UNRAID_Apps/pkgs/container/x-webhook-receiver)
-  - **Support Forum**: [UNRAID Community Thread](https://forums.unraid.net/) *(Coming Soon)*
-  - **Issue Tracker**: [Report Bugs](https://github.com/N85UK/UNRAID_APP/issues/new?template=bug_report.yml)
-  - **Changelog**: [Release Notes](https://github.com/N85UK/UNRAID_Apps/releases)
+  <h3>🔗 Links</h3>
+  <ul>
+    <li><strong>Source Code</strong>: <a href="https://github.com/N85UK/UNRAID_Apps/tree/main/Apps/X_Webhook-Receiver">GitHub Repository</a></li>
+    <li><strong>Docker Image</strong>: <a href="https://github.com/N85UK/UNRAID_Apps/pkgs/container/x-webhook-receiver">ghcr.io/n85uk/x-webhook-receiver</a></li>
+    <li><strong>Support Forum</strong>: <a href="https://forums.unraid.net/">UNRAID Community Thread</a> <em>(Coming Soon)</em></li>
+    <li><strong>Issue Tracker</strong>: <a href="https://github.com/N85UK/UNRAID_APP/issues/new?template=bug_report.yml">Report Bugs</a></li>
+    <li><strong>Changelog</strong>: <a href="https://github.com/N85UK/UNRAID_Apps/releases">Release Notes</a></li>
+  </ul>
 
-  ### 📊 Configuration Example
-  ```yaml
-  # UniFi Protect Smart Detection Alert
-  Source: UniFi Protect
-  Event Type: smart_detection
-  Transform:
-    - Extract: detection_type, camera_name, timestamp
-    - Filter: detection_type == "person"
-  Action:
-    - Send SMS: "Person detected at {camera_name}"
-  ```
+  <h3>📊 Configuration Example</h3>
+  <pre><code class="language-yaml"># UniFi Protect Smart Detection Alert
+Source: UniFi Protect
+Event Type: smart_detection
+Transform:
+  - Extract: detection_type, camera_name, timestamp
+  - Filter: detection_type == "person"
+Action:
+  - Send SMS: "Person detected at {camera_name}"
+</code></pre>
 </div>
 
 ---
@@ -131,29 +136,33 @@ lang: en-GB
     </div>
   </div>
 
-  ### 🎯 What It Does
-  Full-featured SMS/MMS messaging platform for businesses. Manage two-way conversations, automate responses, and handle customer communications through a modern web interface powered by AWS Pinpoint.
+  <h3>🎯 What It Does</h3>
+  <p>Full-featured SMS/MMS messaging platform for businesses. Manage two-way conversations, automate responses, and handle customer communications through a modern web interface powered by AWS Pinpoint.</p>
 
-  ### ✨ Key Features
-  - 💬 **Two-Way SMS/MMS Messaging** - Send and receive messages with full conversation threading
-  - 👥 **Contact Management** - Organize contacts with custom fields and conversation history
-  - 🧵 **Threaded Conversations** - WhatsApp-style conversation view with unread indicators
-  - 🤖 **Automated Keyword Responses** - Set up auto-replies based on keywords or phrases
-  - 📸 **Media Attachment Support** - Send and receive images, videos, and files
-  - ☁️ **AWS Pinpoint Integration** - Enterprise-grade SMS delivery with global reach
-  - 🔍 **Advanced Search** - Find messages and contacts instantly with full-text search
-  - 📊 **Message Analytics** - Track delivery rates, costs, and conversation metrics
-  - 🔐 **Multi-User Support** - Role-based access control for teams
-  - 📱 **Real-Time Updates** - WebSocket-based live message delivery
+  <h3>✨ Key Features</h3>
+  <ul>
+    <li>💬 <strong>Two-Way SMS/MMS Messaging</strong> - Send and receive messages with full conversation threading</li>
+    <li>👥 <strong>Contact Management</strong> - Organize contacts with custom fields and conversation history</li>
+    <li>🧵 <strong>Threaded Conversations</strong> - WhatsApp-style conversation view with unread indicators</li>
+    <li>🤖 <strong>Automated Keyword Responses</strong> - Set up auto-replies based on keywords or phrases</li>
+    <li>📸 <strong>Media Attachment Support</strong> - Send and receive images, videos, and files</li>
+    <li>☁️ <strong>AWS Pinpoint Integration</strong> - Enterprise-grade SMS delivery with global reach</li>
+    <li>🔍 <strong>Advanced Search</strong> - Find messages and contacts instantly with full-text search</li>
+    <li>📊 <strong>Message Analytics</strong> - Track delivery rates, costs, and conversation metrics</li>
+    <li>🔐 <strong>Multi-User Support</strong> - Role-based access control for teams</li>
+    <li>📱 <strong>Real-Time Updates</strong> - WebSocket-based live message delivery</li>
+  </ul>
 
-  ### 💡 Real-World Use Cases
-  - **Customer Support**: Manage customer SMS inquiries from a central dashboard
-  - **Appointment Reminders**: Send automated appointment confirmations and reminders
-  - **Marketing Campaigns**: Broadcast promotional messages to customer segments
-  - **Two-Factor Auth**: Build custom 2FA systems with SMS verification
-  - **Order Updates**: Notify customers about order status changes via SMS
+  <h3>💡 Real-World Use Cases</h3>
+  <ul>
+    <li><strong>Customer Support</strong>: Manage customer SMS inquiries from a central dashboard</li>
+    <li><strong>Appointment Reminders</strong>: Send automated appointment confirmations and reminders</li>
+    <li><strong>Marketing Campaigns</strong>: Broadcast promotional messages to customer segments</li>
+    <li><strong>Two-Factor Auth</strong>: Build custom 2FA systems with SMS verification</li>
+    <li><strong>Order Updates</strong>: Notify customers about order status changes via SMS</li>
+  </ul>
 
-  ### 🛠️ Tech Stack
+  <h3>🛠️ Tech Stack</h3>
   <div class="tech-stack">
     <span class="badge badge-node">Node.js 20</span>
     <span class="badge badge-framework">Express</span>
@@ -164,69 +173,72 @@ lang: en-GB
     <span class="badge badge-realtime">WebSockets</span>
   </div>
 
-  ### 📋 Prerequisites
-  Before installing, ensure you have:
-  - ✅ UNRAID 6.9+ (6.12+ recommended)
-  - ✅ MySQL/MariaDB database
-  - ✅ **AWS Account with Pinpoint configured** (required)
-  - ✅ AWS Pinpoint phone number (required for sending)
-  - ✅ SNS topic for incoming messages (webhook endpoint)
-  - ✅ Network access (port 3000 default)
-  - ✅ 1GB RAM minimum (2GB recommended for production)
+  <h3>📋 Prerequisites</h3>
+  <p>Before installing, ensure you have:</p>
+  <ul>
+    <li>✅ UNRAID 6.9+ (6.12+ recommended)</li>
+    <li>✅ MySQL/MariaDB database</li>
+    <li>✅ <strong>AWS Account with Pinpoint configured</strong> (required)</li>
+    <li>✅ AWS Pinpoint phone number (required for sending)</li>
+    <li>✅ SNS topic for incoming messages (webhook endpoint)</li>
+    <li>✅ Network access (port 3000 default)</li>
+    <li>✅ 1GB RAM minimum (2GB recommended for production)</li>
+  </ul>
 
-  ### 🏗️ Architecture
-  ```
-  React Frontend ← WebSocket → Node.js API
+  <h3>🏗️ Architecture</h3>
+  <pre><code>React Frontend ← WebSocket → Node.js API
                                     ↓
                               MySQL Database
                                     ↓
                          AWS Pinpoint (SMS) ← SNS Webhooks
-  ```
+</code></pre>
 
-  ### 🎬 Quick Start
-  ```bash
-  # 1. Pull the latest image
-  docker pull ghcr.io/n85uk/aws-ultimate-messaging:latest
-  
-  # 2. Set required environment variables
-  DATABASE_URL=mysql://user:pass@host:3306/messaging
-  AWS_REGION=us-east-1
-  AWS_ACCESS_KEY_ID=your_key
-  AWS_SECRET_ACCESS_KEY=your_secret
-  PINPOINT_APPLICATION_ID=your_app_id
-  
-  # 3. Deploy via UNRAID template (see below)
-  ```
+  <h3>🎬 Quick Start</h3>
+  <pre><code class="language-bash"># 1. Pull the latest image
+docker pull ghcr.io/n85uk/aws-ultimate-messaging:latest
 
-  ### 📦 Installation
+# 2. Set required environment variables
+DATABASE_URL=mysql://user:pass@host:3306/messaging
+AWS_REGION=us-east-1
+AWS_ACCESS_KEY_ID=your_key
+AWS_SECRET_ACCESS_KEY=your_secret
+PINPOINT_APPLICATION_ID=your_app_id
+
+# 3. Deploy via UNRAID template (see below)
+</code></pre>
+
+  <h3>📦 Installation</h3>
   <div class="install-buttons">
     <a href="https://github.com/N85UK/UNRAID_APP/blob/main/templates/aws-ultimate-messaging.xml" class="btn btn-primary">📥 Download Template</a>
     <a href="https://github.com/N85UK/UNRAID_APP/wiki/AWS-Ultimate-Messaging-Setup" class="btn btn-secondary">📖 Setup Guide</a>
     <a href="https://github.com/N85UK/UNRAID_Apps/blob/main/Apps/AWS_Ultimate_Messaging/AWS_SETUP.md" class="btn btn-tertiary">☁️ AWS Setup</a>
   </div>
 
-  ### 🔗 Links
-  - **Source Code**: [GitHub Repository](https://github.com/N85UK/UNRAID_Apps/tree/main/Apps/AWS_Ultimate_Messaging)
-  - **Docker Image**: [ghcr.io/n85uk/aws-ultimate-messaging](https://github.com/N85UK/UNRAID_Apps/pkgs/container/aws-ultimate-messaging)
-  - **Support Forum**: [UNRAID Community Thread](https://forums.unraid.net/topic/194489-support-aws-ultimate-messaging-app/)
-  - **Issue Tracker**: [Report Bugs](https://github.com/N85UK/UNRAID_APP/issues/new?template=bug_report.yml)
-  - **Changelog**: [Release Notes](https://github.com/N85UK/UNRAID_Apps/releases)
-  - **AWS Setup Guide**: [Complete AWS Configuration](https://github.com/N85UK/UNRAID_Apps/blob/main/Apps/AWS_Ultimate_Messaging/AWS_SETUP.md)
+  <h3>🔗 Links</h3>
+  <ul>
+    <li><strong>Source Code</strong>: <a href="https://github.com/N85UK/UNRAID_Apps/tree/main/Apps/AWS_Ultimate_Messaging">GitHub Repository</a></li>
+    <li><strong>Docker Image</strong>: <a href="https://github.com/N85UK/UNRAID_Apps/pkgs/container/aws-ultimate-messaging">ghcr.io/n85uk/aws-ultimate-messaging</a></li>
+    <li><strong>Support Forum</strong>: <a href="https://forums.unraid.net/topic/194489-support-aws-ultimate-messaging-app/">UNRAID Community Thread</a></li>
+    <li><strong>Issue Tracker</strong>: <a href="https://github.com/N85UK/UNRAID_APP/issues/new?template=bug_report.yml">Report Bugs</a></li>
+    <li><strong>Changelog</strong>: <a href="https://github.com/N85UK/UNRAID_Apps/releases">Release Notes</a></li>
+    <li><strong>AWS Setup Guide</strong>: <a href="https://github.com/N85UK/UNRAID_Apps/blob/main/Apps/AWS_Ultimate_Messaging/AWS_SETUP.md">Complete AWS Configuration</a></li>
+  </ul>
 
-  ### 📊 Configuration Example
-  ```yaml
-  # Auto-Reply for Business Hours
-  Keyword: "HOURS"
-  Response: "We're open Mon-Fri 9am-5pm EST"
-  Match Type: Exact
-  Priority: High
-  ```
+  <h3>📊 Configuration Example</h3>
+  <pre><code class="language-yaml"># Auto-Reply for Business Hours
+Keyword: "HOURS"
+Response: "We're open Mon-Fri 9am-5pm EST"
+Match Type: Exact
+Priority: High
+</code></pre>
 
-  ### 💰 Cost Considerations
-  - SMS costs vary by destination country (AWS Pinpoint pricing)
-  - US/Canada: ~$0.00645 per message segment
-  - UK: ~$0.0392 per message segment
-  - Built-in cost tracking shows per-message expenses
+  <h3>💰 Cost Considerations</h3>
+  <ul>
+    <li>SMS costs vary by destination country (AWS Pinpoint pricing)</li>
+    <li>US/Canada: ~$0.00645 per message segment</li>
+    <li>UK: ~$0.0392 per message segment</li>
+    <li>Built-in cost tracking shows per-message expenses</li>
+  </ul>
 </div>
 
 ---
@@ -234,60 +246,187 @@ lang: en-GB
 ## 🚀 Quick Installation Guide
 
 <div class="installation-guide">
-  ### Method 1: UNRAID Community Applications (Recommended)
+  <h3>Method 1: UNRAID Community Applications (Recommended)</h3>
   
-  1. **Add Template Repository**
-     - Navigate to: `Docker → Add Container → Template repositories`
-     - Add URL: `https://github.com/N85UK/UNRAID_APP`
-     - Click "Add"
+  <ol>
+    <li><strong>Add Template Repository</strong>
+      <ul>
+        <li>Navigate to: <code>Docker → Add Container → Template repositories</code></li>
+        <li>Add URL: <code>https://github.com/N85UK/UNRAID_APP</code></li>
+        <li>Click "Add"</li>
+      </ul>
+    </li>
+    
+    <li><strong>Search for Applications</strong>
+      <ul>
+        <li>Go to <code>Apps</code> tab in UNRAID</li>
+        <li>Search for "X Webhook Receiver" or "AWS Ultimate Messaging"</li>
+        <li>Click application name to view details</li>
+      </ul>
+    </li>
+    
+    <li><strong>Configure & Deploy</strong>
+      <ul>
+        <li>Fill in required environment variables (see Prerequisites above)</li>
+        <li>Adjust port mappings if needed (defaults: 8000 for X Webhook, 3000 for AWS Messaging)</li>
+        <li>Set volume paths for persistent data</li>
+        <li>Click "Apply" to deploy</li>
+      </ul>
+    </li>
+  </ol>
 
-  2. **Search for Applications**
-     - Go to `Apps` tab in UNRAID
-     - Search for "X Webhook Receiver" or "AWS Ultimate Messaging"
-     - Click application name to view details
-
-  3. **Configure & Deploy**
-     - Fill in required environment variables (see Prerequisites above)
-     - Adjust port mappings if needed (defaults: 8000 for X Webhook, 3000 for AWS Messaging)
-     - Set volume paths for persistent data
-     - Click "Apply" to deploy
-
-  ### Method 2: Manual XML Template
+  <h3>Method 2: Manual XML Template</h3>
   
-  1. **Download Template**
-     - Download the `.xml` template for your chosen app (links above)
-  
-  2. **Import to UNRAID**
-     - Go to `Docker → Add Container`
-     - Click "Template" dropdown → "Add Template"
-     - Browse and select downloaded XML file
-  
-  3. **Configure & Deploy**
-     - Same as Method 1, step 3
+  <ol>
+    <li><strong>Download Template</strong>
+      <ul>
+        <li>Download the <code>.xml</code> template for your chosen app (links above)</li>
+      </ul>
+    </li>
+    
+    <li><strong>Import to UNRAID</strong>
+      <ul>
+        <li>Go to <code>Docker → Add Container</code></li>
+        <li>Click "Template" dropdown → "Add Template"</li>
+        <li>Browse and select downloaded XML file</li>
+      </ul>
+    </li>
+    
+    <li><strong>Configure & Deploy</strong>
+      <ul>
+        <li>Same as Method 1, step 3</li>
+      </ul>
+    </li>
+  </ol>
 
-  ### Method 3: Docker Command Line
+  <h3>Method 3: Docker Command Line</h3>
   
-  ```bash
-  # X Webhook Receiver
-  docker run -d \
-    --name x-webhook-receiver \
-    -p 8000:8000 \
-    -e DATABASE_URL=postgresql://user:pass@host:5432/webhooks \
-    -e AWS_REGION=us-east-1 \
-    -v /mnt/user/appdata/x-webhook:/app/data \
-    ghcr.io/n85uk/x-webhook-receiver:latest
+  <pre><code class="language-bash"># X Webhook Receiver
+docker run -d \
+  --name x-webhook-receiver \
+  -p 8000:8000 \
+  -e DATABASE_URL=postgresql://user:pass@host:5432/webhooks \
+  -e AWS_REGION=us-east-1 \
+  -v /mnt/user/appdata/x-webhook:/app/data \
+  ghcr.io/n85uk/x-webhook-receiver:latest
 
-  # AWS Ultimate Messaging
-  docker run -d \
-    --name aws-ultimate-messaging \
-    -p 3000:3000 \
-    -e DATABASE_URL=mysql://user:pass@host:3306/messaging \
-    -e AWS_REGION=us-east-1 \
-    -e AWS_ACCESS_KEY_ID=your_key \
-    -e AWS_SECRET_ACCESS_KEY=your_secret \
-    -e PINPOINT_APPLICATION_ID=your_app_id \
-    -v /mnt/user/appdata/aws-messaging:/app/data \
-    ghcr.io/n85uk/aws-ultimate-messaging:latest
+# AWS Ultimate Messaging
+docker run -d \
+  --name aws-ultimate-messaging \
+  -p 3000:3000 \
+  -e DATABASE_URL=mysql://user:pass@host:3306/messaging \
+  -e AWS_REGION=us-east-1 \
+  -e AWS_ACCESS_KEY_ID=your_key \
+  -e AWS_SECRET_ACCESS_KEY=your_secret \
+  -e PINPOINT_APPLICATION_ID=your_app_id \
+  -v /mnt/user/appdata/aws-messaging:/app/data \
+  ghcr.io/n85uk/aws-ultimate-messaging:latest
+</code></pre>
+</div>
+
+---
+
+## 📚 Documentation & Resources
+
+<div class="documentation-grid">
+  <div class="doc-card">
+    <h3>📖 Setup Guides</h3>
+    <ul>
+      <li><a href="https://github.com/N85UK/UNRAID_APP/wiki/X-Webhook-Receiver-Setup">X Webhook Receiver Installation</a></li>
+      <li><a href="https://github.com/N85UK/UNRAID_APP/wiki/AWS-Ultimate-Messaging-Setup">AWS Ultimate Messaging Installation</a></li>
+      <li><a href="https://github.com/N85UK/UNRAID_Apps/blob/main/Apps/AWS_Ultimate_Messaging/AWS_SETUP.md">AWS Pinpoint Configuration</a></li>
+      <li><a href="https://github.com/N85UK/UNRAID_Apps/blob/main/Apps/X_Webhook-Receiver/UNIFI_PROTECT_SETUP.md">UniFi Protect Integration</a></li>
+    </ul>
+  </div>
+
+  <div class="doc-card">
+    <h3>🔌 API Documentation</h3>
+    <ul>
+      <li><a href="https://github.com/N85UK/UNRAID_APP/wiki/X-Webhook-Receiver-API">X Webhook API Reference</a></li>
+      <li><a href="https://github.com/N85UK/UNRAID_Apps/blob/main/Apps/AWS_Ultimate_Messaging/API.md">AWS Messaging API Reference</a></li>
+      <li><a href="https://github.com/N85UK/UNRAID_Apps/blob/main/Apps/AWS_Ultimate_Messaging/WEBSOCKET_EVENTS.md">WebSocket Events</a></li>
+    </ul>
+  </div>
+
+  <div class="doc-card">
+    <h3>🛠️ Troubleshooting</h3>
+    <ul>
+      <li><a href="https://github.com/N85UK/UNRAID_APP/wiki/Common-Issues">Common Issues & Solutions</a></li>
+      <li><a href="https://github.com/N85UK/UNRAID_Apps/blob/main/Apps/AWS_Ultimate_Messaging/TROUBLESHOOTING.md">AWS Messaging Troubleshooting</a></li>
+      <li><a href="https://github.com/N85UK/UNRAID_Apps/blob/main/Apps/X_Webhook-Receiver/TESTING_GUIDE.md">Testing & Validation</a></li>
+    </ul>
+  </div>
+
+  <div class="doc-card">
+    <h3>🔄 Updates & Releases</h3>
+    <ul>
+      <li><a href="https://github.com/N85UK/UNRAID_Apps/releases">Release Notes & Changelog</a></li>
+      <li><a href="https://github.com/N85UK/UNRAID_Apps/blob/main/MIGRATION_GUIDE.md">Migration Guide</a></li>
+      <li><a href="https://github.com/N85UK/UNRAID_Apps/blob/main/CHANGELOG.md">Detailed Changelog</a></li>
+    </ul>
+  </div>
+</div>
+
+---
+
+## 🛟 Support & Community
+
+<div class="support-section">
+  <div class="support-grid">
+    <div class="support-card">
+      <h3>💬 Community Forum</h3>
+      <p>Get help from the UNRAID community</p>
+      <ul>
+        <li><a href="https://forums.unraid.net/topic/194489-support-aws-ultimate-messaging-app/">AWS Ultimate Messaging Thread</a></li>
+        <li><a href="https://forums.unraid.net/">X Webhook Receiver Thread</a> (Coming Soon)</li>
+      </ul>
+    </div>
+
+    <div class="support-card">
+      <h3>🐛 Bug Reports</h3>
+      <p>Found a bug? Help us improve!</p>
+      <ul>
+        <li><a href="https://github.com/N85UK/UNRAID_APP/issues/new?template=bug_report.yml">Report a Bug</a></li>
+        <li><a href="https://github.com/N85UK/UNRAID_APP/issues">View Open Issues</a></li>
+      </ul>
+    </div>
+
+    <div class="support-card">
+      <h3>✨ Feature Requests</h3>
+      <p>Suggest new features and improvements</p>
+      <ul>
+        <li><a href="https://github.com/N85UK/UNRAID_APP/issues/new?template=feature_request.yml">Request a Feature</a></li>
+        <li><a href="https://github.com/N85UK/UNRAID_APP/issues?q=is%3Aissue+label%3Aenhancement">View Roadmap</a></li>
+      </ul>
+    </div>
+
+    <div class="support-card">
+      <h3>🆘 Get Help</h3>
+      <p>Need assistance with setup or configuration?</p>
+      <ul>
+        <li><a href="https://github.com/N85UK/UNRAID_APP/issues/new?template=help.yml">Ask for Help</a></li>
+        <li><a href="https://github.com/N85UK/UNRAID_APP/wiki">Browse Wiki</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+---
+
+## 🔒 Security & Privacy
+
+<div class="security-section">
+  <h3>🛡️ Security Commitments</h3>
+  <ul>
+    <li>✅ <strong>Open Source</strong>: All code is publicly auditable on GitHub</li>
+    <li>✅ <strong>No Telemetry</strong>: We don't collect usage data or analytics</li>
+    <li>✅ <strong>Self-Hosted</strong>: Your data stays on your UNRAID server</li>
+    <li>✅ <strong>Active Maintenance</strong>: Regular security updates and patches</li>
+    <li>✅ <strong>Vulnerability Reporting</strong>: <a href="https://github.com/N85UK/UNRAID_Apps/blob/main/SECURITY.md">Security Policy</a></li>
+  </ul>
+
+  <p>🔐 Report security vulnerabilities privately: <a href="mailto:security@apps.n85.uk">security@apps.n85.uk</a></p>
+</div>
   ```
 </div>
 
