@@ -1,0 +1,21 @@
+# Jekyll build artifacts
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+
+# Reports
+reports/
+*.json
+*.txt
+
+# macOS
+.DS_Store
+
+# IDE
+.vscode/
+.idea/
+
+# Node modules (if using any JS tools)
+node_modules/
+package-lock.json

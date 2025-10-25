@@ -1,0 +1,88 @@
+name: Site Quality Assurance
+
+on:
+  pull_request:
+    branches: [ main ]
+    paths:
+      - '**.md'
+      - '**.html'
+      - '_config.yml'
+      - '_layouts/**'
+      - 'assets/**'
+  workflow_dispatch:
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.3'
+          bundler-cache: false
+
+      - name: Install Jekyll and dependencies
+        run: |
+          gem install jekyll bundler
+          gem install jekyll-seo-tag jekyll-sitemap jekyll-relative-links
+
+      - name: Build Jekyll site
+        run: |
+          jekyll build --verbose
+        env:
+          JEKYLL_ENV: production
+
+      - name: Install html-proofer
+        run: gem install html-proofer
+
+      - name: Test HTML with html-proofer
+        run: |
+          htmlproofer ./_site \
+            --disable-external \
+            --check-html \
+            --allow-hash-href \
+            --ignore-urls "/^http:\/\/127/,/^http:\/\/0/,/^http:\/\/localhost/" \
+            --ignore-status-codes "0,999"
+
+      - name: Check for broken internal links
+        run: |
+          htmlproofer ./_site \
+            --disable-external=false \
+            --checks Links \
+            --allow-hash-href \
+            --url-ignore "https://forums.unraid.net/" \
+            --ignore-status-codes "403,429,999" \
+            || echo "::warning::Some external links may be broken"
+
+      - name: Validate accessibility (basic)
+        run: |
+          if grep -q 'alt=""' ./_site/index.html; then
+            echo "::warning::Found images with empty alt attributes - review for accessibility"
+          fi
+          if ! grep -q 'lang=' ./_site/index.html; then
+            echo "::error::Missing lang attribute on html element"
+            exit 1
+          fi
+
+      - name: Check for security.txt
+        run: |
+          if [ ! -f "./_site/.well-known/security.txt" ]; then
+            echo "::warning::security.txt not found"
+          fi
+
+      - name: Check for robots.txt
+        run: |
+          if [ ! -f "./_site/robots.txt" ]; then
+            echo "::warning::robots.txt not found"
+          fi
+
+      - name: Upload site artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: site-build
+          path: _site/
+          retention-days: 7

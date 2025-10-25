@@ -1,6 +1,11 @@
 ---
 layout: default
 title: N85UK UNRAID Applications - Production-Ready Docker Apps
+description: Production-ready Docker applications for UNRAID servers - X Webhook Receiver and AWS Ultimate Messaging. Actively maintained, multi-arch images on GHCR.
+keywords: unraid, docker, applications, webhook, sms, messaging, pinpoint, aws, postgres, mysql, unifi protect
+author: N85UK
+image: /assets/og-card.png
+lang: en-GB
 ---
 
 <div class="hero">
