@@ -9,6 +9,8 @@ on:
       - '_config.yml'
       - '_layouts/**'
       - 'assets/**'
+      - 'Gemfile'
+      - 'Gemfile.lock'
   workflow_dispatch:
 
 # Minimal permissions for security
@@ -27,16 +29,10 @@ jobs:
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: '3.3'
-          bundler-cache: false
-
-      - name: Install Jekyll and dependencies
-        run: |
-          gem install jekyll bundler
-          gem install jekyll-seo-tag jekyll-sitemap jekyll-relative-links
+          bundler-cache: true
 
       - name: Build Jekyll site
-        run: |
-          jekyll build --verbose
+        run: bundle exec jekyll build --verbose
         env:
           JEKYLL_ENV: production
 
