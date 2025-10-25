@@ -1,75 +1,157 @@
 # UNRAID Community Applications
 
-This repository contains UNRAID Community Applications templates maintained by N85UK.
+Official UNRAID Community Applications repository for production-ready Docker containers.
 
-## Available Applications
+🌐 **Website:** [https://git.n85.uk](https://git.n85.uk)  
+📦 **Docker Images:** [GitHub Container Registry](https://github.com/N85UK?tab=packages)
 
-### 🚀 AWS Ultimate Messaging
-Enterprise-grade messaging platform with AWS Pinpoint and SNS integration for 2-way SMS/MMS communication.
+---
+
+## 📱 Applications
+
+### AWS Ultimate Messaging
+Enterprise-grade SMS/MMS messaging platform with AWS Pinpoint integration.
+
+- **Docker Image:** `ghcr.io/n85uk/aws-ultimate-messaging:latest`
+- **Template:** [aws-ultimate-messaging.xml](templates/aws-ultimate-messaging.xml)
+- **Support:** [UNRAID Forums](https://forums.unraid.net/topic/194489-support-aws-ultimate-messaging-app/)
+- **Documentation:** See [docs/aws-ultimate-messaging/](docs/aws-ultimate-messaging/)
 
 **Features:**
-- 2-way SMS/MMS messaging via AWS Pinpoint
+- Two-way SMS/MMS communication via AWS Pinpoint/SNS
 - Contact management with import/export
-- Conversation threading and history
-- Keyword automation and auto-responses
-- Real-time webhook processing
-- Media attachments support
+- Conversation threading
+- Keyword automation & auto-replies
+- Real-time WebSocket updates
 - RESTful API
-- Modern React UI
+- Modern React UI with dark mode
 
-**[Documentation](./docs/aws-ultimate-messaging/)** | **[Installation Guide](./docs/aws-ultimate-messaging/installation.md)**
+**Requirements:**
+- MariaDB/MySQL database
+- AWS Account with Pinpoint/SNS configured
+- Phone number provisioned in AWS
 
 ---
 
-### 📨 X Webhook Receiver
-Production-ready webhook receiver and processor with UniFi Protect and UCG Max integration.
+### X Webhook Receiver
+Universal webhook processing platform with UniFi Protect integration.
+
+- **Docker Image:** `ghcr.io/n85uk/x-webhook-receiver:latest`
+- **Template:** [x-webhook-receiver.xml](templates/x-webhook-receiver.xml)
+- **Support:** [UNRAID Forums](https://forums.unraid.net/topic/XXXXX) *(coming soon)*
+- **Documentation:** See [docs/x-webhook-receiver/](docs/x-webhook-receiver/)
 
 **Features:**
-- Universal webhook endpoint (HMAC verification)
-- UniFi Protect alarm transformation
-- UniFi UCG Max/Network event processing
-- SQLite-based alert history with automatic retention
-- Advanced JSONPath mapping engine
-- Alert categorization and filtering
+- Universal webhook endpoint with HMAC verification
+- UniFi Protect smart detection integration
+- Custom webhook transformation with JSONPath
+- PostgreSQL event storage
 - Real-time WebSocket notifications
+- Alert retention management
 - Modern React dashboard
-- Comprehensive alert browser
 
-**[Documentation](./docs/x-webhook-receiver/)** | **[Installation Guide](./docs/x-webhook-receiver/installation.md)**
-
----
-
-## Installation
-
-All applications are available through the UNRAID Community Applications plugin:
-
-1. Open UNRAID WebGUI
-2. Navigate to the **Apps** tab
-3. Search for the application name
-4. Click **Install** and configure as needed
-
-## Support
-
-For issues, questions, or feature requests:
-
-- **AWS Ultimate Messaging:** [Support Thread](https://forums.unraid.net/topic/XXXXX-support-aws-ultimate-messaging/) (Coming Soon)
-- **X Webhook Receiver:** [Support Thread](https://forums.unraid.net/topic/XXXXX-support-x-webhook-receiver/) (Coming Soon)
-
-## Source Code
-
-- **AWS Ultimate Messaging:** [GitHub Repository](https://github.com/N85UK/UNRAID_Apps/tree/main/Apps/AWS_Ultimate_Messaging)
-- **X Webhook Receiver:** [GitHub Repository](https://github.com/N85UK/UNRAID_Apps/tree/main/Apps/X_Webhook-Receiver)
-
-## License
-
-Applications are provided under their respective licenses. See individual application repositories for details.
-
-## Maintainer
-
-**N85UK**
-- GitHub: [@N85UK](https://github.com/N85UK)
-- UNRAID Community Applications: [Developer Profile](https://github.com/N85UK/UNRAID_APP)
+**Requirements:**
+- PostgreSQL database
 
 ---
 
-**Note:** This repository contains UNRAID template files only. For source code and full documentation, visit the individual application repositories.
+## 🚀 Installation
+
+### Via Community Applications (Recommended)
+
+1. Open **Apps** tab in UNRAID
+2. Search for the application name
+3. Click **Install**
+4. Configure settings
+5. Click **Apply**
+
+### Via Template URL
+
+1. Go to **Docker** → **Add Container**
+2. Select **Template repositories** → Add this repository URL
+3. Choose your application from the dropdown
+4. Configure and deploy
+
+### Manual Docker Installation
+
+See individual application documentation in the [docs/](docs/) directory.
+
+---
+
+## 📋 Repository Structure
+
+```
+UNRAID_APP/
+├── templates/              # UNRAID XML templates
+│   ├── aws-ultimate-messaging.xml
+│   └── x-webhook-receiver.xml
+├── icons/                  # Application icons
+├── docs/                   # Documentation
+│   ├── aws-ultimate-messaging/
+│   └── x-webhook-receiver/
+├── .github/                # GitHub configuration
+│   └── ISSUE_TEMPLATE/     # Issue templates
+└── ca_profile.xml          # Developer profile
+```
+
+---
+
+## 📖 Documentation
+
+- **Website:** [https://git.n85.uk](https://git.n85.uk) - Application showcase and guides
+- **Templates:** XML templates for UNRAID Community Applications
+- **Support:** Individual forum threads linked above
+- **Issues:** [GitHub Issues](https://github.com/N85UK/UNRAID_APP/issues)
+
+---
+
+## 🐛 Bug Reports & Feature Requests
+
+Please use our [GitHub Issues](https://github.com/N85UK/UNRAID_APP/issues/new/choose) to:
+- Report bugs
+- Request features
+- Ask for installation help
+
+For application-specific bugs, please visit the respective support forum threads.
+
+---
+
+## 🔐 Docker Images
+
+All Docker images are built automatically via GitHub Actions and published to GitHub Container Registry (GHCR):
+
+- **Registry:** `ghcr.io/n85uk/`
+- **Architectures:** `linux/amd64`, `linux/arm64`
+- **Updates:** Automatic on code changes
+- **Visibility:** Public (no authentication required)
+
+---
+
+## 📜 License
+
+MIT License - See individual application documentation for details.
+
+---
+
+## 💬 Support
+
+- **General Questions:** [GitHub Discussions](https://github.com/N85UK/UNRAID_APP/discussions)
+- **Bug Reports:** [GitHub Issues](https://github.com/N85UK/UNRAID_APP/issues)
+- **AWS Ultimate Messaging:** [Forum Thread](https://forums.unraid.net/topic/194489-support-aws-ultimate-messaging-app/)
+- **X Webhook Receiver:** Forum Thread *(coming soon)*
+
+---
+
+## 🤝 Contributing
+
+This repository contains UNRAID application templates and documentation. Source code is managed separately.
+
+To contribute:
+1. Fork this repository
+2. Make your changes
+3. Submit a pull request
+
+---
+
+**Maintained by:** [@N85UK](https://github.com/N85UK)  
+**Last Updated:** October 2025
