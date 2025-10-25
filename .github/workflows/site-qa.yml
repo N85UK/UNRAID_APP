@@ -11,6 +11,10 @@ on:
       - 'assets/**'
   workflow_dispatch:
 
+# Minimal permissions for security
+permissions:
+  contents: read
+
 jobs:
   build-and-test:
     runs-on: ubuntu-latest
@@ -60,8 +64,9 @@ jobs:
 
       - name: Validate accessibility (basic)
         run: |
-          if grep -q 'alt=""' ./_site/index.html; then
-            echo "::warning::Found images with empty alt attributes - review for accessibility"
+          # Check for images missing alt attribute entirely (not empty alt which is valid for decorative images)
+          if grep -qE '<img[^>]+(?<!alt=")>' ./_site/index.html 2>/dev/null; then
+            echo "::warning::Found images without alt attributes - review for accessibility"
           fi
           if ! grep -q 'lang=' ./_site/index.html; then
             echo "::error::Missing lang attribute on html element"

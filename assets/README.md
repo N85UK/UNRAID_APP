@@ -11,7 +11,8 @@ This directory contains static assets for the site.
 
 ### Notes
 - All images should be optimized for web delivery
-- Use PNG for logos/icons, WebP for photos where possible
+- WebP format is recommended for all images (98%+ browser support, better compression than PNG)
+- Use PNG as fallback only for favicon compatibility
 - Add `width` and `height` attributes to all `<img>` tags in index.md to prevent CLS
 
 ## Current Status
