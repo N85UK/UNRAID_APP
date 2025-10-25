@@ -1,14 +1,14 @@
 blank_issues_enabled: true
 contact_links:
   - name: X Webhook Receiver Support Thread
-    url: https://forums.unraid.net/
+    url: https://forums.unraid.net/topic/194489-support-aws-ultimate-messaging-app/
     about: Official UNRAID forum support thread for X Webhook Receiver
   - name: AWS Ultimate Messaging Support Thread
-    url: https://forums.unraid.net/
+    url: https://forums.unraid.net/topic/194489-support-aws-ultimate-messaging-app/
     about: Official UNRAID forum support thread for AWS Ultimate Messaging
   - name: Source Code - X Webhook Receiver
-    url: https://github.com/N85UK/UNRAID_Apps/tree/main/Apps/X_Webhook-Receiver
+    url: https://git.n85.uk
     about: View the source code and report application bugs
   - name: Source Code - AWS Ultimate Messaging
-    url: https://github.com/N85UK/UNRAID_Apps/tree/main/Apps/AWS_Ultimate_Messaging
+    url: https://git.n85.uk
     about: View the source code and report application bugs

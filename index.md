@@ -29,7 +29,7 @@ title: N85UK UNRAID Applications
     </div>
 
     <div class="app-links">
-      <a href="https://github.com/N85UK/UNRAID_Apps/tree/main/Apps/X_Webhook-Receiver" class="btn btn-primary">View Source</a>
+      <a href="https://github.com/N85UK/UNRAID_APP" class="btn btn-primary">View Source</a>
       <a href="https://github.com/N85UK/UNRAID_APP/blob/main/templates/x-webhook-receiver.xml" class="btn btn-secondary">Install Template</a>
       <a href="https://forums.unraid.net/" class="btn btn-tertiary">Support Forum</a>
     </div>
@@ -62,7 +62,7 @@ title: N85UK UNRAID Applications
     </div>
 
     <div class="app-links">
-      <a href="https://github.com/N85UK/UNRAID_Apps/tree/main/Apps/AWS_Ultimate_Messaging" class="btn btn-primary">View Source</a>
+      <a href="https://github.com/N85UK/UNRAID_APP" class="btn btn-primary">View Source</a>
       <a href="https://github.com/N85UK/UNRAID_APP/blob/main/templates/aws-ultimate-messaging.xml" class="btn btn-secondary">Install Template</a>
       <a href="https://forums.unraid.net/" class="btn btn-tertiary">Support Forum</a>
     </div>
@@ -107,7 +107,7 @@ title: N85UK UNRAID Applications
     <div class="support-card">
       <h3>📚 Documentation</h3>
       <p>Comprehensive guides and API documentation for each application</p>
-      <a href="https://github.com/N85UK/UNRAID_Apps/tree/main/Apps">View Docs</a>
+      <a href="https://github.com/N85UK/UNRAID_APP">View Docs</a>
     </div>
     
     <div class="support-card">
