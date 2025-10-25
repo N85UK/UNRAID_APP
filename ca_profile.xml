@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Maintainer>
+  <Icon>https://github.com/N85UK.png</Icon>
+  <Profile>
+    Developing production-ready UNRAID applications with focus on reliability, 
+    security, and comprehensive documentation. Specializing in messaging systems 
+    and webhook processing with enterprise-grade architecture.
+  </Profile>
+  <WebPage>https://github.com/N85UK</WebPage>
+  <DonateText>If you find my applications useful, consider supporting development.</DonateText>
+</Maintainer>

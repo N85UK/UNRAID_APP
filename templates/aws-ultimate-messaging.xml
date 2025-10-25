@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>AWS-Ultimate-Messaging</Name>
+  <Repository>ghcr.io/n85uk/aws-ultimate-messaging:latest</Repository>
+  <Registry>https://ghcr.io/n85uk/aws-ultimate-messaging:latest</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/XXXXX-support-aws-ultimate-messaging/</Support>
+  <Project>https://github.com/N85UK/UNRAID_Apps/tree/main/Apps/AWS_Ultimate_Messaging</Project>
+  <Overview>Enterprise-grade messaging platform with AWS Pinpoint and SNS integration for 2-way SMS/MMS communication. Features contact management with import/export, conversation threading, keyword automation, real-time webhook processing, media attachments, RESTful API, and a modern React UI.</Overview>
+  <Category>Network:Messaging Productivity: Tools: Status:Stable</Category>
+  <WebUI>http://[IP]:[PORT:3000]</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/N85UK/UNRAID_APP/main/templates/aws-ultimate-messaging.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/N85UK/UNRAID_APP/main/icons/aws-ultimate-messaging.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled/>
+  <DonateText>If you find this application useful, consider supporting development.</DonateText>
+  <DonateLink/>
+  <Requires>
+**AWS Account** with Pinpoint and SNS configured
+**MySQL/MariaDB Database** (not included)
+
+See documentation for AWS setup instructions and database configuration.
+  </Requires>
+  <Config Name="WebUI Port" Target="3000" Default="3000" Mode="tcp" Description="Web interface port" Type="Port" Display="always" Required="true" Mask="false">3000</Config>
+  <Config Name="API Port" Target="8080" Default="8080" Mode="tcp" Description="API server port" Type="Port" Display="always" Required="true" Mask="false">8080</Config>
+  <Config Name="AppData" Target="/app/data" Default="/mnt/user/appdata/aws-ultimate-messaging" Mode="rw" Description="Application data directory" Type="Path" Display="advanced" Required="true" Mask="false">/mnt/user/appdata/aws-ultimate-messaging</Config>
+  <Config Name="Database Host" Target="DB_HOST" Default="localhost" Mode="" Description="MySQL/MariaDB hostname" Type="Variable" Display="always" Required="true" Mask="false">localhost</Config>
+  <Config Name="Database Port" Target="DB_PORT" Default="3306" Mode="" Description="MySQL/MariaDB port" Type="Variable" Display="always" Required="true" Mask="false">3306</Config>
+  <Config Name="Database Name" Target="DB_NAME" Default="messaging" Mode="" Description="Database name" Type="Variable" Display="always" Required="true" Mask="false">messaging</Config>
+  <Config Name="Database User" Target="DB_USER" Default="messaging_user" Mode="" Description="Database username" Type="Variable" Display="always" Required="true" Mask="false">messaging_user</Config>
+  <Config Name="Database Password" Target="DB_PASSWORD" Default="" Mode="" Description="Database password" Type="Variable" Display="always" Required="true" Mask="true"/>
+  <Config Name="AWS Access Key ID" Target="AWS_ACCESS_KEY_ID" Default="" Mode="" Description="AWS access key with Pinpoint/SNS permissions" Type="Variable" Display="always" Required="true" Mask="true"/>
+  <Config Name="AWS Secret Access Key" Target="AWS_SECRET_ACCESS_KEY" Default="" Mode="" Description="AWS secret access key" Type="Variable" Display="always" Required="true" Mask="true"/>
+  <Config Name="AWS Region" Target="AWS_REGION" Default="us-east-1" Mode="" Description="AWS region for Pinpoint/SNS" Type="Variable" Display="always" Required="true" Mask="false">us-east-1</Config>
+  <Config Name="Pinpoint Application ID" Target="PINPOINT_APPLICATION_ID" Default="" Mode="" Description="AWS Pinpoint application ID" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="Origination Number" Target="ORIGINATION_NUMBER" Default="" Mode="" Description="Pinpoint origination number (E.164 format: +1234567890)" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="JWT Secret" Target="JWT_SECRET" Default="" Mode="" Description="JWT secret key for authentication (generate random string)" Type="Variable" Display="always" Required="true" Mask="true"/>
+  <Config Name="Session Secret" Target="SESSION_SECRET" Default="" Mode="" Description="Session secret key (generate random string)" Type="Variable" Display="always" Required="true" Mask="true"/>
+  <Config Name="PUID" Target="PUID" Default="99" Mode="" Description="User ID for file permissions" Type="Variable" Display="advanced" Required="false" Mask="false">99</Config>
+  <Config Name="PGID" Target="PGID" Default="100" Mode="" Description="Group ID for file permissions" Type="Variable" Display="advanced" Required="false" Mask="false">100</Config>
+</Container>
