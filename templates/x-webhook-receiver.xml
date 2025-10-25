@@ -1,38 +1,42 @@
 <?xml version="1.0"?>
   <!-- LastUpdate: 2025-10-25 19:26:39 UTC -->
 <Container version="2">
-  <Name>X-Webhook-Receiver</Name>
+  <Name>X_Webhook-Receiver</Name>
   <Repository>ghcr.io/n85uk/x-webhook-receiver:latest</Repository>
-  <Registry>https://ghcr.io/n85uk/x-webhook-receiver:latest</Registry>
+  <Registry>https://ghcr.io</Registry>
   <Network>bridge</Network>
   <MyIP/>
   <Shell>bash</Shell>
   <Privileged>false</Privileged>
-  <Support>https://forums.unraid.net/topic/XXXXX-support-x-webhook-receiver/</Support>
-  <Project>https://github.com/N85UK/UNRAID_APP</Project>
-  <Overview>Production-ready webhook receiver and processor with UniFi Protect and UCG Max integration. Features universal webhook endpoint with HMAC verification, UniFi event transformation, SQLite alert history with automatic retention, advanced JSONPath mapping, and real-time WebSocket notifications with a modern React dashboard.</Overview>
-  <Category>Network:Other Tools: Status:Stable</Category>
-  <WebUI>http://[IP]:[PORT:3000]</WebUI>
-  <TemplateURL>https://raw.githubusercontent.com/N85UK/UNRAID_APP/main/templates/x-webhook-receiver.xml</TemplateURL>
-  <Icon>https://raw.githubusercontent.com/N85UK/UNRAID_APP/main/icons/x-webhook-receiver.png</Icon>
+  <Support>https://github.com/N85UK/UNRAID_Apps/issues</Support>
+  <Project>https://github.com/N85UK/UNRAID_Apps</Project>
+  <Overview>X Webhook v2.0.0 - Transform webhook data into actionable intelligence. Features: Dynamic webhook sources with unique URLs per source, custom field mapping with JSONPath support, rule-based automation engine, webhook forwarding to external systems, real-time dashboard with charts, advanced filtering and search. Perfect for UCG Max, Uptime Robot, GitHub, Prometheus, and any webhook-enabled service. Supports MariaDB/MySQL or PostgreSQL databases.</Overview>
+  <Category>Tools: Network:Management Status:Stable</Category>
+  <WebUI>http://[IP]:[PORT:8000]</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/N85UK/UNRAID_Apps/main/Apps/X_Webhook-Receiver/my-X_Webhook-Receiver.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/N85UK/UNRAID_Apps/main/Apps/X_Webhook-Receiver/icon.png</Icon>
   <ExtraParams/>
   <PostArgs/>
   <CPUset/>
-  <DateInstalled/>
-  <DonateText>If you find this application useful, consider supporting development.</DonateText>
-  <DonateLink/>
-  <Requires>
-**PostgreSQL Database** (included in docker-compose setup)
-
-For manual installation, ensure PostgreSQL is available and DATABASE_URL is configured.
-  </Requires>
-  <Config Name="WebUI Port" Target="3000" Default="3000" Mode="tcp" Description="Web interface port" Type="Port" Display="always" Required="true" Mask="false">3000</Config>
-  <Config Name="API Port" Target="5000" Default="5000" Mode="tcp" Description="API server port" Type="Port" Display="always" Required="true" Mask="false">5000</Config>
-  <Config Name="AppData" Target="/app/data" Default="/mnt/user/appdata/x-webhook-receiver" Mode="rw" Description="Application data directory" Type="Path" Display="advanced" Required="true" Mask="false">/mnt/user/appdata/x-webhook-receiver</Config>
-  <Config Name="Database URL" Target="DATABASE_URL" Default="postgresql://webhook:webhook@postgres:5432/webhook_db" Mode="" Description="PostgreSQL connection string" Type="Variable" Display="always" Required="true" Mask="false">postgresql://webhook:webhook@postgres:5432/webhook_db</Config>
-  <Config Name="Secret Key" Target="SECRET_KEY" Default="" Mode="" Description="Flask secret key for session management (generate random string)" Type="Variable" Display="always" Required="true" Mask="true"/>
-  <Config Name="HMAC Secret" Target="HMAC_SECRET" Default="" Mode="" Description="HMAC verification secret for webhook security (optional)" Type="Variable" Display="advanced" Required="false" Mask="true"/>
-  <Config Name="Alert Retention Days" Target="ALERT_RETENTION_DAYS" Default="90" Mode="" Description="Number of days to retain alerts (0 = keep forever)" Type="Variable" Display="advanced" Required="false" Mask="false">90</Config>
-  <Config Name="PUID" Target="PUID" Default="99" Mode="" Description="User ID for file permissions" Type="Variable" Display="advanced" Required="false" Mask="false">99</Config>
-  <Config Name="PGID" Target="PGID" Default="100" Mode="" Description="Group ID for file permissions" Type="Variable" Display="advanced" Required="false" Mask="false">100</Config>
+  <DateInstalled></DateInstalled>
+  <DonateText>If you find this useful, consider supporting development</DonateText>
+  <DonateLink>https://github.com/sponsors/N85UK</DonateLink>
+  <Requires/>
+  <Config Name="Web UI Port" Target="8000" Default="8000" Mode="tcp" Description="Web interface port" Type="Port" Display="always" Required="true" Mask="false">8000</Config>
+  <Config Name="Database Type" Target="DB_TYPE" Default="mariadb" Mode="" Description="Database type: mariadb, mysql, or postgresql" Type="Variable" Display="always" Required="true" Mask="false">mariadb</Config>
+  <Config Name="Database Host" Target="DB_HOST" Default="" Mode="" Description="Database server hostname or IP address" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Database Port" Target="DB_PORT" Default="3306" Mode="" Description="Database server port (3306 for MariaDB/MySQL, 5432 for PostgreSQL)" Type="Variable" Display="always" Required="true" Mask="false">3306</Config>
+  <Config Name="Database Name" Target="DB_NAME" Default="ucg_webhook_db" Mode="" Description="Database name" Type="Variable" Display="always" Required="true" Mask="false">ucg_webhook_db</Config>
+  <Config Name="Database User" Target="DB_USER" Default="ucg_webhook" Mode="" Description="Database username" Type="Variable" Display="always" Required="true" Mask="false">ucg_webhook</Config>
+  <Config Name="Database Password" Target="DB_PASSWORD" Default="" Mode="" Description="Database password" Type="Variable" Display="always" Required="true" Mask="true"></Config>
+  <Config Name="Secret Key" Target="SECRET_KEY" Default="" Mode="" Description="Master secret key used for JWT authentication AND encrypting webhook source authentication secrets. Generate with: python -c 'import secrets; print(secrets.token_hex(32))'. REQUIRED for security!" Type="Variable" Display="always" Required="true" Mask="true"></Config>
+  <Config Name="HMAC Secret" Target="HMAC_SECRET" Default="" Mode="" Description="[LEGACY] Shared secret for webhook HMAC verification on legacy /webhook endpoint. For new setups, use dynamic webhook sources instead (managed via UI)." Type="Variable" Display="advanced" Required="false" Mask="true"></Config>
+  <Config Name="Bearer Token" Target="BEARER_TOKEN" Default="" Mode="" Description="[LEGACY] Bearer token for webhook authentication on legacy /webhook endpoint. For new setups, use dynamic webhook sources instead (managed via UI)." Type="Variable" Display="advanced" Required="false" Mask="true"></Config>
+  <Config Name="Admin Username" Target="ADMIN_USER" Default="admin" Mode="" Description="Admin login username for web interface access" Type="Variable" Display="always" Required="true" Mask="false">admin</Config>
+  <Config Name="Admin Password" Target="ADMIN_PASSWORD" Default="changeme" Mode="" Description="Admin login password for web interface (IMPORTANT: Change from default 'changeme'!)" Type="Variable" Display="always" Required="true" Mask="true">changeme</Config>
+  <Config Name="Alert Retention Days" Target="ALERT_RETENTION_DAYS" Default="30" Mode="" Description="Number of days to keep alerts before automatic deletion" Type="Variable" Display="advanced" Required="false" Mask="false">30</Config>
+  <Config Name="Rate Limit Requests" Target="RATE_LIMIT_REQUESTS" Default="100" Mode="" Description="Maximum requests per window" Type="Variable" Display="advanced" Required="false" Mask="false">100</Config>
+  <Config Name="Rate Limit Window" Target="RATE_LIMIT_WINDOW" Default="60" Mode="" Description="Rate limit window in seconds" Type="Variable" Display="advanced" Required="false" Mask="false">60</Config>
+  <Config Name="Log Level" Target="LOG_LEVEL" Default="INFO" Mode="" Description="Logging level (DEBUG, INFO, WARNING, ERROR)" Type="Variable" Display="advanced" Required="false" Mask="false">INFO</Config>
+  <Config Name="Application Data" Target="/app/data" Default="/mnt/user/appdata/ucg-max-webhook" Mode="rw" Description="Application data directory" Type="Path" Display="advanced" Required="true" Mask="false">/mnt/user/appdata/ucg-max-webhook</Config>
 </Container>
