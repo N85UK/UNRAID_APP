@@ -1,0 +1,71 @@
+name: Installation Help
+description: Get help installing or configuring an application
+title: "[HELP] "
+labels: ["question", "help wanted"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Need help? Fill out this form and we'll assist you!
+        
+        **Note:** For application-specific issues, please visit the support threads:
+        - X Webhook Receiver: [Support Thread](https://forums.unraid.net/)
+        - AWS Ultimate Messaging: [Support Thread](https://forums.unraid.net/)
+
+  - type: dropdown
+    id: application
+    attributes:
+      label: Which Application?
+      description: Select the application you need help with
+      options:
+        - X Webhook Receiver
+        - AWS Ultimate Messaging
+    validations:
+      required: true
+
+  - type: dropdown
+    id: stage
+    attributes:
+      label: Installation Stage
+      description: What stage are you at?
+      options:
+        - Haven't installed yet
+        - Installation failed
+        - Container won't start
+        - Container running but not working
+        - Configuration issues
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: question
+    attributes:
+      label: Your Question
+      description: What do you need help with?
+      placeholder: I'm trying to...
+    validations:
+      required: true
+
+  - type: textarea
+    id: tried
+    attributes:
+      label: What Have You Tried?
+      description: What steps have you already attempted?
+      placeholder: I've tried...
+
+  - type: input
+    id: unraid-version
+    attributes:
+      label: UNRAID Version
+      description: What version of UNRAID are you running?
+      placeholder: e.g., 6.12.4
+    validations:
+      required: true
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots or Logs
+      description: If applicable, add screenshots or logs to help explain your problem
+      placeholder: Paste or drag images here

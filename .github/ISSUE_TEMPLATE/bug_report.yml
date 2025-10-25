@@ -1,0 +1,92 @@
+name: Bug Report
+description: Report a bug or issue with an application template
+title: "[BUG] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report a bug! Please fill out the form below.
+
+  - type: dropdown
+    id: application
+    attributes:
+      label: Which Application?
+      description: Select the application you're having issues with
+      options:
+        - X Webhook Receiver
+        - AWS Ultimate Messaging
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Bug Description
+      description: A clear description of what the bug is
+      placeholder: Tell us what you're experiencing
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Behavior
+      description: What did you expect to happen?
+      placeholder: Describe what should happen
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual Behavior
+      description: What actually happened?
+      placeholder: Describe what actually happened
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to Reproduce
+      description: How can we reproduce this issue?
+      placeholder: |
+        1. Go to '...'
+        2. Click on '...'
+        3. See error
+    validations:
+      required: true
+
+  - type: input
+    id: unraid-version
+    attributes:
+      label: UNRAID Version
+      description: What version of UNRAID are you running?
+      placeholder: e.g., 6.12.4
+    validations:
+      required: true
+
+  - type: input
+    id: template-version
+    attributes:
+      label: Template Version
+      description: What version of the template are you using? (Check Container Edit page)
+      placeholder: e.g., 1.0.0
+
+  - type: textarea
+    id: docker-logs
+    attributes:
+      label: Docker Logs
+      description: |
+        Please include relevant Docker logs. You can get these from:
+        UNRAID → Docker → Container → Logs
+      placeholder: Paste relevant logs here
+      render: shell
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional Context
+      description: Add any other context about the problem here
+      placeholder: Any additional information that might help
