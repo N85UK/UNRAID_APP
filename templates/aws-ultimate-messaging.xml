@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-  <!-- LastUpdate: 2025-10-26 15:33:53 UTC -->
+  <!-- LastUpdate: 2025-10-26 15:39:49 UTC -->
 <Container version="2">
   <Name>AWS-Ultimate-Messaging</Name>
   <Repository>ghcr.io/n85uk/aws-ultimate-messaging:latest</Repository>
