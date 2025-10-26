@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>AA-SMS-App</Name>
+  <Repository>ghcr.io/n85uk/aa-sms-app:latest</Repository>
+  <Registry>https://ghcr.io/</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/N85UK/UNRAID_Apps/issues</Support>
+  <Project>https://github.com/N85UK/UNRAID_Apps/tree/main/Apps/AA_SMS_App</Project>
+  <Overview>
+    AA SMS App - Andrews &amp; Arnold SMS Management Application
+    
+    A complete SMS management solution for AA (Andrews &amp; Arnold) accounts with:
+    - Multi-account management
+    - Send and receive SMS messages
+    - Built-in contact management
+    - Conversation threading
+    - Webhook support for incoming messages
+    - Modern web interface with Material-UI
+    
+    Access the web interface at: http://[IP]:[PORT:8282]
+  </Overview>
+  <Category>Tools: Network:Management Status:Stable</Category>
+  <WebUI>http://[IP]:[PORT:8282]</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/N85UK/UNRAID_App/main/templates/aa-sms-app.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/N85UK/UNRAID_App/main/icons/aa-sms-app.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled></DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Requires/>
+  <Config Name="WebUI Port" Target="8282" Default="8282" Mode="tcp" Description="Web interface port" Type="Port" Display="always" Required="true" Mask="false">8282</Config>
+  <Config Name="Data Storage" Target="/data" Default="/mnt/user/appdata/aa-sms-app" Mode="rw" Description="Database and application data storage" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/aa-sms-app</Config>
+  <Config Name="Secret Key" Target="SECRET_KEY" Default="" Mode="" Description="Application secret key (generate a random 32+ character string)" Type="Variable" Display="always" Required="true" Mask="true"></Config>
+  <Config Name="Webhook Secret" Target="WEBHOOK_SECRET" Default="" Mode="" Description="Webhook secret for incoming messages (generate a random 32+ character string)" Type="Variable" Display="always" Required="true" Mask="true"></Config>
+  <Config Name="Encryption Key" Target="ENCRYPTION_KEY" Default="" Mode="" Description="Encryption key for AA passwords (use: python -c 'from cryptography.fernet import Fernet; print(Fernet.generate_key().decode())')" Type="Variable" Display="always" Required="true" Mask="true"></Config>
+  <Config Name="Debug Mode" Target="DEBUG" Default="false" Mode="" Description="Enable debug mode (true/false)" Type="Variable" Display="advanced" Required="false" Mask="false">false</Config>
+  <Config Name="Database Path" Target="DATABASE_PATH" Default="/data/aa_sms.db" Mode="" Description="SQLite database file path" Type="Variable" Display="advanced" Required="false" Mask="false">/data/aa_sms.db</Config>
+  <Config Name="Host" Target="HOST" Default="0.0.0.0" Mode="" Description="Server host binding" Type="Variable" Display="advanced" Required="false" Mask="false">0.0.0.0</Config>
+  <Config Name="Port" Target="PORT" Default="8282" Mode="" Description="Internal server port" Type="Variable" Display="advanced" Required="false" Mask="false">8282</Config>
+</Container>
