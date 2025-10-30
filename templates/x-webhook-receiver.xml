@@ -13,8 +13,8 @@
   <Overview>X Webhook v2.0.0 - Transform webhook data into actionable intelligence. Features: Dynamic webhook sources with unique URLs per source, custom field mapping with JSONPath support, rule-based automation engine, webhook forwarding to external systems, real-time dashboard with charts, advanced filtering and search. Perfect for UCG Max, Uptime Robot, GitHub, Prometheus, and any webhook-enabled service. Supports MariaDB/MySQL or PostgreSQL databases.</Overview>
   <Category>Tools: Network:Management Status:Stable</Category>
   <WebUI>http://[IP]:[PORT:8000]</WebUI>
-  <TemplateURL>https://raw.githubusercontent.com/N85UK/UNRAID_Apps/main/Apps/X_Webhook-Receiver/my-X_Webhook-Receiver.xml</TemplateURL>
-  <Icon>https://raw.githubusercontent.com/N85UK/UNRAID_Apps/main/Apps/X_Webhook-Receiver/icon.png</Icon>
+  <TemplateURL>https://raw.githubusercontent.com/N85UK/UNRAID_App/main/templates/x-webhook-receiver.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/N85UK/UNRAID_App/main/icons/x-webhook-receiver.png</Icon>
   <ExtraParams/>
   <PostArgs/>
   <CPUset/>
