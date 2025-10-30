@@ -20,7 +20,7 @@
   </Overview>
   <Category>Tools:Utilities Network:Messaging Status:Stable</Category>
   <WebUI>http://[IP]:[PORT:3000]</WebUI>
-  <TemplateURL>https://raw.githubusercontent.com/N85UK/UNRAID_Apps/main/Apps/Ultimate_Messages/my-ultimate-messages.xml</TemplateURL>
+  <TemplateURL>https://raw.githubusercontent.com/N85UK/UNRAID_App/main/templates/ultimate-messages.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/N85UK/UNRAID_App/main/icons/ultimate-messages.png</Icon>
   <ExtraParams/>
   <PostArgs/>

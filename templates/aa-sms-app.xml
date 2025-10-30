@@ -26,7 +26,7 @@
   <WebUI>http://[IP]:[PORT:8282]</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/N85UK/UNRAID_App/main/templates/aa-sms-app.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/N85UK/UNRAID_App/main/icons/aa-sms-app.png</Icon>
-  <ExtraParams/>
+  <ExtraParams>--restart=unless-stopped</ExtraParams>
   <PostArgs/>
   <CPUset/>
   <DateInstalled></DateInstalled>
@@ -38,6 +38,7 @@
   <Config Name="Secret Key" Target="SECRET_KEY" Default="" Mode="" Description="Application secret key (generate a random 32+ character string)" Type="Variable" Display="always" Required="true" Mask="true"></Config>
   <Config Name="Webhook Secret" Target="WEBHOOK_SECRET" Default="" Mode="" Description="Webhook secret for incoming messages (generate a random 32+ character string)" Type="Variable" Display="always" Required="true" Mask="true"></Config>
   <Config Name="Encryption Key" Target="ENCRYPTION_KEY" Default="" Mode="" Description="Encryption key for AA passwords (use: python -c 'from cryptography.fernet import Fernet; print(Fernet.generate_key().decode())')" Type="Variable" Display="always" Required="true" Mask="true"></Config>
+  <Config Name="Public URL" Target="VITE_PUBLIC_URL" Default="" Mode="" Description="Public URL for webhook (e.g., https://aa.n46.uk) - leave empty to auto-detect" Type="Variable" Display="always" Required="false" Mask="false"></Config>
   <Config Name="Debug Mode" Target="DEBUG" Default="false" Mode="" Description="Enable debug mode (true/false)" Type="Variable" Display="advanced" Required="false" Mask="false">false</Config>
   <Config Name="Database Path" Target="DATABASE_PATH" Default="/data/aa_sms.db" Mode="" Description="SQLite database file path" Type="Variable" Display="advanced" Required="false" Mask="false">/data/aa_sms.db</Config>
   <Config Name="Host" Target="HOST" Default="0.0.0.0" Mode="" Description="Server host binding" Type="Variable" Display="advanced" Required="false" Mask="false">0.0.0.0</Config>
