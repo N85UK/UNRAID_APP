@@ -2,7 +2,7 @@
 
 Official UNRAID Community Applications repository for production-ready Docker containers.
 
-🌐 **Website:** [https://git.n85.uk](https://git.n85.uk)  
+🌐 **Website:** [https://apps.n85.uk](https://apps.n85.uk)  
 📦 **Docker Images:** [GitHub Container Registry](https://github.com/N85UK?tab=packages)
 
 ---
@@ -152,7 +152,7 @@ UNRAID_APP/
 
 ## 📖 Documentation
 
-- **Website:** [https://git.n85.uk](https://git.n85.uk) - Application showcase and guides
+- **Website:** [https://apps.n85.uk](https://apps.n85.uk) - Application showcase and guides
 - **Templates:** XML templates for UNRAID Community Applications
 - **Source Code:** [UNRAID_Apps Repository](https://github.com/N85UK/UNRAID_Apps)
 - **Support:** Individual forum threads and GitHub issues
