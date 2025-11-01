@@ -105,6 +105,32 @@ Universal webhook processing platform with UniFi Protect integration.
 
 ---
 
+### Octopus Energy Monitor
+Real-time energy usage and cost tracking for Octopus Energy customers.
+
+- **Docker Image:** `ghcr.io/n85uk/octopus-energy-monitor:latest`
+- **Template:** [octopus-energy-monitor.xml](templates/octopus-energy-monitor.xml)
+- **Support:** [GitHub Issues](https://github.com/N85UK/UNRAID_Apps/issues)
+- **Documentation:** See [Apps/Octopus_Energy_Monitor/](https://github.com/N85UK/UNRAID_Apps/tree/main/Apps/Octopus_Energy_Monitor)
+
+**Features:**
+- Automatic meter discovery from Octopus account
+- Half-hourly electricity and gas consumption tracking
+- Automatic tariff rate fetching (Agile, Flexible, etc.)
+- Cost calculations per interval, day, week, month
+- Prometheus metrics endpoint (/metrics)
+- Grafana-ready SQLite database
+- RESTful API for custom integrations
+- Optional GraphQL support for Home Mini
+- Multi-arch Docker images (amd64/arm64)
+
+**Requirements:**
+- Octopus Energy account with API key
+- SQLite (default) or optional MariaDB/MySQL
+
+
+---
+
 ## 🚀 Installation
 
 ### Via Community Applications (Recommended)
@@ -209,5 +235,5 @@ To contribute:
 ---
 
 **Maintained by:** [@N85UK](https://github.com/N85UK)  
-**Last Updated:** October 30, 2025  
-**Applications:** 4 Production-Ready Docker Containers
+**Last Updated:** November 1, 2025  
+**Applications:** 5 Production-Ready Docker Containers

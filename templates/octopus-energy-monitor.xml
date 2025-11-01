@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+  <!-- LastUpdate: 2025-11-01 14:30:00 UTC -->
+<Container version="2">
+  <Name>OctopusEnergyMonitor</Name>
+  <Repository>ghcr.io/n85uk/octopus-energy-monitor:latest</Repository>
+  <Registry>https://ghcr.io</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/N85UK/UNRAID_Apps/issues</Support>
+  <Project>https://github.com/N85UK/UNRAID_Apps</Project>
+  <Overview>Octopus Energy Monitor v1.0.0 - Track your energy usage and costs in real-time. Features: Automatic meter discovery from your Octopus account, half-hourly electricity and gas consumption tracking, automatic tariff rate fetching (Agile, Flexible, etc.), cost calculations per interval/day/week/month, Prometheus metrics at /metrics, Grafana-ready SQLite database, RESTful API for custom integrations, optional GraphQL support for Home Mini real-time data. Initial setup backfills 400 days of data. Incremental sync runs every 30 minutes.</Overview>
+  <Category>Tools:Utilities Status:Stable</Category>
+  <WebUI>http://[IP]:[PORT:8088]/docs</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/N85UK/UNRAID_App/main/templates/octopus-energy-monitor.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/N85UK/UNRAID_App/main/icons/octopus-energy-monitor.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled></DateInstalled>
+  <DonateText>If you find this useful, consider supporting development</DonateText>
+  <DonateLink>https://github.com/sponsors/N85UK</DonateLink>
+  <Requires/>
+  <Config Name="Web UI Port" Target="8088" Default="8088" Mode="tcp" Description="Web interface and API port" Type="Port" Display="always" Required="true" Mask="false">8088</Config>
+  <Config Name="Prometheus Port" Target="9090" Default="9090" Mode="tcp" Description="Prometheus metrics port" Type="Port" Display="advanced" Required="false" Mask="false">9090</Config>
+  <Config Name="Octopus Account Number" Target="OCTOPUS_ACCOUNT_NUMBER" Default="" Mode="" Description="Your Octopus Energy account number (e.g., A-ABCD1234)" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Octopus API Key" Target="OCTOPUS_API_KEY" Default="" Mode="" Description="Your Octopus Energy API key (from https://octopus.energy/dashboard/new/accounts/personal-details/api-access)" Type="Variable" Display="always" Required="true" Mask="true"></Config>
+  <Config Name="Authentication Mode" Target="AUTH_MODE" Default="bearer" Mode="" Description="Authentication mode: 'bearer' (recommended) or 'basic'" Type="Variable" Display="always" Required="true" Mask="false">bearer</Config>
+  <Config Name="MPAN (Electricity)" Target="MPAN" Default="" Mode="" Description="Electricity MPAN number (optional - auto-discovered if blank)" Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
+  <Config Name="Electric Meter Serial" Target="ELECTRIC_METER_SERIAL" Default="" Mode="" Description="Electricity meter serial number (optional - auto-discovered if blank)" Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
+  <Config Name="MPRN (Gas)" Target="MPRN" Default="" Mode="" Description="Gas MPRN number (optional - auto-discovered if blank)" Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
+  <Config Name="Gas Meter Serial" Target="GAS_METER_SERIAL" Default="" Mode="" Description="Gas meter serial number (optional - auto-discovered if blank)" Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
+  <Config Name="Electric Product Code" Target="ELECTRIC_PRODUCT_CODE" Default="" Mode="" Description="Electricity product code (optional - auto-discovered if blank)" Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
+  <Config Name="Electric Tariff Code" Target="ELECTRIC_TARIFF_CODE" Default="" Mode="" Description="Electricity tariff code (optional - auto-discovered if blank)" Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
+  <Config Name="Gas Product Code" Target="GAS_PRODUCT_CODE" Default="" Mode="" Description="Gas product code (optional - auto-discovered if blank)" Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
+  <Config Name="Gas Tariff Code" Target="GAS_TARIFF_CODE" Default="" Mode="" Description="Gas tariff code (optional - auto-discovered if blank)" Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
+  <Config Name="GraphQL Enabled" Target="GRAPHQL_ENABLED" Default="false" Mode="" Description="Enable experimental GraphQL client for Home Mini real-time data (true/false)" Type="Variable" Display="advanced" Required="false" Mask="false">false</Config>
+  <Config Name="GraphQL API URL" Target="GRAPHQL_API_URL" Default="" Mode="" Description="GraphQL API URL for Home Mini (optional, e.g., https://api.octopus.energy/v1/graphql/)" Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
+  <Config Name="Sync Schedule" Target="SYNC_SCHEDULE_CRON" Default="*/30 * * * *" Mode="" Description="Cron schedule for incremental sync (default: every 30 minutes)" Type="Variable" Display="advanced" Required="false" Mask="false">*/30 * * * *</Config>
+  <Config Name="Database URL" Target="DATABASE_URL" Default="sqlite:////app/data/octopus_energy.db" Mode="" Description="Database connection string (SQLite default, or use MySQL: mysql+aiomysql://user:pass@host:3306/dbname)" Type="Variable" Display="advanced" Required="false" Mask="false">sqlite:////app/data/octopus_energy.db</Config>
+  <Config Name="Log Level" Target="LOG_LEVEL" Default="INFO" Mode="" Description="Logging level (DEBUG, INFO, WARNING, ERROR)" Type="Variable" Display="advanced" Required="false" Mask="false">INFO</Config>
+  <Config Name="Application Data" Target="/app/data" Default="/mnt/user/appdata/octopus-energy-monitor" Mode="rw" Description="Application data directory for database and logs" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/octopus-energy-monitor</Config>
+</Container>

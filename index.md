@@ -1,7 +1,7 @@
 ---
 layout: default
 title: N85UK UNRAID Applications - Production-Ready Docker Apps
-description: Production-ready Docker applications for UNRAID servers - Ultimate Messages, AA SMS App, AWS Ultimate Messaging, and X Webhook Receiver. Actively maintained, multi-arch images on GHCR.
+description: Production-ready Docker applications for UNRAID servers - Ultimate Messages, AA SMS App, AWS Ultimate Messaging, X Webhook Receiver, and Octopus Energy Monitor. Actively maintained, multi-arch images on GHCR.
 keywords: unraid, docker, applications, webhook, sms, messaging, pinpoint, aws, postgres, mysql, unifi protect, andrews arnold
 author: N85UK
 image: /assets/og-card.png
@@ -11,7 +11,7 @@ lang: en-GB
 <div class="hero">
   <h1>🚀 Professional UNRAID Applications</h1>
   <p class="subtitle">Production-ready Docker containers for messaging, webhooks, and automation</p>
-  <p class="version-info">Last Updated: October 30, 2025 | 4 Applications Available</p>
+  <p class="version-info">Last Updated: November 1, 2025 | 5 Applications Available</p>
 </div>
 
 <!-- Trust Indicators -->
@@ -378,6 +378,124 @@ Action:
 </code></pre>
 </div>
 
+
+---
+
+## ⚡ Octopus Energy Monitor
+<div class="app-showcase">
+  <div class="app-header-large">
+    <img src="icons/octopus-energy-monitor.png" alt="Octopus Energy Monitor Dashboard" class="app-icon-large">
+    <div class="app-title-block">
+      <h3>Real-Time Energy Usage & Cost Tracking</h3>
+      <p class="version-badge">Version 1.0.0 | Production Ready | Updated: Nov 1, 2025</p>
+    </div>
+  </div>
+
+  <h3>🎯 What It Does</h3>
+  <p>Track your Octopus Energy consumption and costs in real-time. Auto-discovers your meters, fetches half-hourly usage data, calculates costs including Agile tariffs, and exposes everything via Prometheus metrics and REST API for Grafana dashboards.</p>
+
+  <h3>✨ Key Features</h3>
+  <ul>
+    <li>🔍 <strong>Auto-Discovery</strong> - Automatically finds your MPAN/MPRN, meter serials, and tariff codes</li>
+    <li>📊 <strong>Half-Hourly Data</strong> - Tracks electricity and gas with 30-minute interval precision</li>
+    <li>💰 <strong>Smart Cost Calculation</strong> - Joins consumption with tariff rates for accurate cost tracking</li>
+    <li>⚡ <strong>Agile Tariff Support</strong> - Fetches day-ahead prices published 16:00-20:00 daily</li>
+    <li>📈 <strong>Prometheus Metrics</strong> - Built-in /metrics endpoint for monitoring</li>
+    <li>🎨 <strong>Grafana Ready</strong> - Includes starter dashboard with heatmaps and cost analysis</li>
+    <li>🔐 <strong>Dual Authentication</strong> - Bearer token (preferred) or HTTP Basic fallback</li>
+    <li>🗄️ <strong>Flexible Storage</strong> - SQLite default or optional MariaDB/MySQL</li>
+    <li>🔄 <strong>Automated Sync</strong> - Scheduled updates every 30 minutes via APScheduler</li>
+    <li>📱 <strong>GraphQL Optional</strong> - Experimental Home Mini integration for real-time data</li>
+  </ul>
+
+  <h3>💡 Real-World Use Cases</h3>
+  <ul>
+    <li><strong>Cost Monitoring</strong>: Track daily/weekly/monthly energy costs with detailed breakdowns</li>
+    <li><strong>Agile Optimization</strong>: Identify cheapest periods to run appliances on Agile tariff</li>
+    <li><strong>Usage Patterns</strong>: Analyze consumption by time of day and day of week with heatmaps</li>
+    <li><strong>Bill Validation</strong>: Compare tracked costs against actual bills for accuracy</li>
+    <li><strong>Home Automation</strong>: Integrate with Home Assistant via REST API or Prometheus</li>
+  </ul>
+
+  <h3>🛠️ Tech Stack</h3>
+  <div class="tech-stack">
+    <span class="badge badge-python">Python 3.12</span>
+    <span class="badge badge-framework">FastAPI</span>
+    <span class="badge badge-framework">Uvicorn</span>
+    <span class="badge badge-database">SQLite</span>
+    <span class="badge badge-database">SQLAlchemy</span>
+    <span class="badge badge-cloud">Prometheus</span>
+  </div>
+
+  <h3>📋 Prerequisites</h3>
+  <p>Before installing, ensure you have:</p>
+  <ul>
+    <li>✅ UNRAID 6.9+ (6.12+ recommended)</li>
+    <li>✅ <strong>Octopus Energy account</strong> with API key (<a href="https://octopus.energy/dashboard/new/accounts/personal-details/api-access">get yours here</a>)</li>
+    <li>✅ Your account number (format: A-ABCD1234)</li>
+    <li>✅ 256MB RAM minimum (512MB recommended)</li>
+    <li>✅ SQLite (included) or optional MariaDB/MySQL database</li>
+  </ul>
+
+  <h3>🏗️ Architecture</h3>
+  <pre><code>Octopus API → Auto-Discovery → SQLite/MySQL
+      ↓              ↓              ↓
+  Consumption    Tariff Rates   Cost Engine
+      ↓              ↓              ↓
+   REST API ← Prometheus ← Grafana Dashboard
+</code></pre>
+
+  <h3>🎬 Quick Start</h3>
+  <pre><code class="language-bash"># 1. Get your Octopus API key
+Visit: https://octopus.energy/dashboard/new/accounts/personal-details/api-access
+
+# 2. Pull the latest image
+docker pull ghcr.io/n85uk/octopus-energy-monitor:latest
+
+# 3. Deploy via UNRAID template (see below)
+# Set OCTOPUS_ACCOUNT_NUMBER and OCTOPUS_API_KEY
+# All other settings are auto-discovered!
+
+# 4. Access dashboards
+# API Docs: http://YOUR-IP:8088/docs
+# Prometheus: http://YOUR-IP:9090/metrics
+# Import Grafana dashboard from included JSON
+</code></pre>
+
+  <h3>📦 Installation</h3>
+  <div class="install-buttons">
+    <a href="https://github.com/N85UK/UNRAID_APP/blob/main/templates/octopus-energy-monitor.xml" class="btn btn-primary">📥 Download Template</a>
+    <a href="https://github.com/N85UK/UNRAID_Apps/tree/main/Apps/Octopus_Energy_Monitor" class="btn btn-secondary">📖 Documentation</a>
+    <a href="https://github.com/N85UK/UNRAID_Apps/blob/main/Apps/Octopus_Energy_Monitor/README.md" class="btn btn-tertiary">🚀 Setup Guide</a>
+  </div>
+
+  <h3>🔗 Links</h3>
+  <ul>
+    <li><strong>Source Code</strong>: <a href="https://github.com/N85UK/UNRAID_Apps/tree/main/Apps/Octopus_Energy_Monitor">GitHub Repository</a></li>
+    <li><strong>Docker Image</strong>: <a href="https://github.com/N85UK/UNRAID_Apps/pkgs/container/octopus-energy-monitor">ghcr.io/n85uk/octopus-energy-monitor</a></li>
+    <li><strong>Grafana Dashboard</strong>: <a href="https://github.com/N85UK/UNRAID_Apps/blob/main/Apps/Octopus_Energy_Monitor/grafana/OctopusEnergy.json">JSON Template</a></li>
+    <li><strong>Issue Tracker</strong>: <a href="https://github.com/N85UK/UNRAID_Apps/issues">Report Bugs</a></li>
+  </ul>
+
+  <h3>📊 Grafana Dashboard Includes</h3>
+  <ul>
+    <li>📈 <strong>Usage Charts</strong> - Half-hourly and daily consumption trends</li>
+    <li>💷 <strong>Cost Analysis</strong> - Rolling 30-day cost breakdown with unit rates</li>
+    <li>🌡️ <strong>Heatmaps</strong> - Cost per kWh by hour of day and weekday</li>
+    <li>⚡ <strong>Agile Pricing</strong> - Visualize cheapest and most expensive periods</li>
+    <li>📊 <strong>Summary Tables</strong> - Daily/weekly/monthly aggregates</li>
+  </ul>
+
+  <h3>🔐 Authentication Modes</h3>
+  <pre><code class="language-bash"># Bearer Token (Recommended)
+curl -H "Authorization: Bearer YOUR_API_KEY" http://localhost:8088/api/usage
+
+# HTTP Basic (Fallback)
+curl -u YOUR_API_KEY: http://localhost:8088/api/usage
+</code></pre>
+</div>
+
+
 ---
 
 ## 🚀 Quick Installation Guide
@@ -397,7 +515,7 @@ Action:
     <li><strong>Search for Applications</strong>
       <ul>
         <li>Go to <code>Apps</code> tab in UNRAID</li>
-        <li>Search for "Ultimate Messages", "AA SMS App", "AWS Ultimate Messaging", or "X Webhook Receiver"</li>
+        <li>Search for "Ultimate Messages", "AA SMS App", "AWS Ultimate Messaging", "X Webhook Receiver", or "Octopus Energy Monitor"</li>
         <li>Click application name to view details</li>
       </ul>
     </li>
@@ -614,5 +732,5 @@ docker run -d \
 ---
 
 **Maintained by:** [@N85UK](https://github.com/N85UK)  
-**Last Updated:** October 30, 2025  
+**Last Updated:** November 1, 2025  
 **License:** MIT
