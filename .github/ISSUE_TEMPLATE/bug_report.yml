@@ -14,8 +14,11 @@ body:
       label: Which Application?
       description: Select the application you're having issues with
       options:
-        - X Webhook Receiver
+        - Ultimate Messages
+        - AA SMS App
         - AWS Ultimate Messaging
+        - X Webhook Receiver
+        - Octopus Energy Monitor
     validations:
       required: true
 

@@ -8,9 +8,7 @@ body:
       value: |
         Need help? Fill out this form and we'll assist you!
         
-        **Note:** For application-specific issues, please visit the support threads:
-        - X Webhook Receiver: [Support Thread](https://forums.unraid.net/)
-        - AWS Ultimate Messaging: [Support Thread](https://forums.unraid.net/)
+        **Note:** For application-specific issues, please visit the main UNRAID Apps repository or check the documentation at [apps.n85.uk](https://apps.n85.uk)
 
   - type: dropdown
     id: application
@@ -18,8 +16,11 @@ body:
       label: Which Application?
       description: Select the application you need help with
       options:
-        - X Webhook Receiver
+        - Ultimate Messages
+        - AA SMS App
         - AWS Ultimate Messaging
+        - X Webhook Receiver
+        - Octopus Energy Monitor
     validations:
       required: true
 

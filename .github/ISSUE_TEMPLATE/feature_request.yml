@@ -14,9 +14,12 @@ body:
       label: Which Application?
       description: Select which application this feature is for
       options:
-        - X Webhook Receiver
+        - Ultimate Messages
+        - AA SMS App
         - AWS Ultimate Messaging
-        - Both
+        - X Webhook Receiver
+        - Octopus Energy Monitor
+        - Multiple Applications
         - General (template improvements)
     validations:
       required: true
