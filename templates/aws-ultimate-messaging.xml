@@ -8,8 +8,8 @@
   <MyIP/>
   <Shell>bash</Shell>
   <Privileged>false</Privileged>
-  <Support>https://forums.unraid.net/topic/194489-support-aws-ultimate-messaging-app/</Support>
-  <Project>https://github.com/N85UK/UNRAID_APP</Project>
+  <Support>https://github.com/N85UK/UNRAID_Apps/issues</Support>
+  <Project>https://github.com/N85UK/UNRAID_Apps/tree/main/Apps/AWS_Ultimate_Messaging</Project>
   <Overview>Enterprise-grade messaging platform with AWS Pinpoint and SNS integration for 2-way SMS/MMS communication. Features contact management with import/export, conversation threading, keyword automation, real-time webhook processing, media attachments, RESTful API, and a modern React UI.</Overview>
   <Category>Network:Messaging Productivity: Tools: Status:Stable</Category>
   <WebUI>http://[IP]:[PORT:3000]</WebUI>
