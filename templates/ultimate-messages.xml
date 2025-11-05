@@ -7,7 +7,7 @@
   <MyIP/>
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
-  <Support>https://github.com/N85UK/UNRAID_Apps/issues</Support>
+  <Support>https://github.com/N85UK/UNRAID_APP/issues</Support>
   <Project>https://github.com/N85UK/UNRAID_Apps/tree/main/Apps/Ultimate_Messages</Project>
   <Overview>
     Ultimate Messages - Enterprise-grade unified multi-provider SMS platform combining Andrews &amp; Arnold and AWS SNS/Pinpoint with intelligent routing, automation, and team collaboration.

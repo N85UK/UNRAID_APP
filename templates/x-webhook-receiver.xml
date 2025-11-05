@@ -8,7 +8,7 @@
   <MyIP/>
   <Shell>bash</Shell>
   <Privileged>false</Privileged>
-  <Support>https://github.com/N85UK/UNRAID_Apps/issues</Support>
+  <Support>https://github.com/N85UK/UNRAID_APP/issues</Support>
   <Project>https://github.com/N85UK/UNRAID_Apps/tree/main/Apps/X_Webhook-Receiver</Project>
   <Overview>X Webhook v2.0.0 - Transform webhook data into actionable intelligence. Features: Dynamic webhook sources with unique URLs per source, custom field mapping with JSONPath support, rule-based automation engine, webhook forwarding to external systems, real-time dashboard with charts, advanced filtering and search. Perfect for UCG Max, Uptime Robot, GitHub, Prometheus, and any webhook-enabled service. Supports MariaDB/MySQL or PostgreSQL databases.</Overview>
   <Category>Tools: Network:Management Status:Stable</Category>

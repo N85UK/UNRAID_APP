@@ -5,10 +5,7 @@ contact_links:
     about: View documentation and setup guides for all applications
   - name: 💻 Source Code Repository
     url: https://github.com/N85UK/UNRAID_Apps
-    about: Main development repository - report application bugs and request features
+    about: Main development repository with source code
   - name: 💬 UNRAID Community Forums
     url: https://forums.unraid.net/
     about: Get help from the UNRAID community
-  - name: 🐛 Report Application Bug
-    url: https://github.com/N85UK/UNRAID_Apps/issues/new?labels=bug
-    about: Report bugs in the application code (not template issues)
