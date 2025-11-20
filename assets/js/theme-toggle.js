@@ -2,16 +2,24 @@
   const THEME_KEY = 'n85uk-theme';
   const toggle = document.getElementById('theme-toggle');
   if (!toggle) return;
+  
+  const icon = toggle.querySelector('i');
 
   function applyTheme(theme){
     if (theme === 'dark') {
       document.documentElement.setAttribute('data-theme', 'dark');
-      toggle.setAttribute('aria-pressed', 'true');
-      toggle.textContent = 'Light';
+      toggle.setAttribute('aria-label', 'Switch to Light Mode');
+      if (icon) {
+        icon.classList.remove('fa-moon');
+        icon.classList.add('fa-sun');
+      }
     } else {
       document.documentElement.removeAttribute('data-theme');
-      toggle.setAttribute('aria-pressed', 'false');
-      toggle.textContent = 'Dark';
+      toggle.setAttribute('aria-label', 'Switch to Dark Mode');
+      if (icon) {
+        icon.classList.remove('fa-sun');
+        icon.classList.add('fa-moon');
+      }
     }
   }
 
