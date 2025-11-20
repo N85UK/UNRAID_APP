@@ -12,6 +12,31 @@
   --border: #dfeaf3;
 }
 
+/* Dark theme (toggle with data-theme="dark") */
+:root[data-theme="dark"] {
+  --brand-900: #001b2e;
+  --brand-800: #1d3f58;
+  --brand-600: #537692; /* Use same palette but dark background */
+  --brand-300: #b3cde4;
+  --bg: #001b2e;
+  --white: #ffffff;
+  --text: #eef3f9;
+  --muted: #b3cde4;
+  --card: #12303f;
+  --border: #1d3f58;
+}
+
+html, body {
+  height: 100%;
+}
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  margin: 0;
+  padding: 0;
+}
+
 .hero {
   padding: 4rem 1rem;
   background: linear-gradient(180deg, var(--brand-900), var(--brand-800));
@@ -24,4 +49,10 @@
 .trust-badges { margin-top: 1.25rem }
 .trust-badge { font-size: 0.9rem; padding: 0.5rem 0.75rem; }
 
-.site-footer { background: linear-gradient(180deg, transparent 0, rgba(0,0,0,0.03) 100%); }
+.main-content { max-width: 1100px; margin: 1.25rem auto; padding: 0.75rem; color: var(--text);} 
+.site-footer { background: linear-gradient(180deg, transparent 0, rgba(0,0,0,0.03) 100%);} 
+
+.btn { display: inline-block; background: var(--white); color: var(--brand-900); padding: 0.5rem 1rem; border-radius: 6px; text-decoration: none; border: 1px solid var(--border);} 
+
+#theme-toggle { border-radius: 6px; background: rgba(255,255,255,0.06); color: var(--white); border: 1px solid rgba(255,255,255,0.06); padding: 6px 10px; } 
+#theme-toggle[aria-pressed="true"] { background: rgba(255,255,255,0.1); }
