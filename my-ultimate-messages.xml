@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Ultimate-Messages</Name>
+  <Repository>ghcr.io/n85uk/ultimate-messages:latest</Repository>
+  <Registry>https://ghcr.io/n85uk/ultimate-messages</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/N85UK/UNRAID_Apps/issues</Support>
+  <Project>https://github.com/N85UK/UNRAID_Apps/tree/main/Apps/Ultimate_Messages</Project>
+  <Overview>
+    Ultimate Messages - Enterprise-grade unified multi-provider SMS platform combining Andrews &amp; Arnold and AWS SNS/Pinpoint with intelligent routing, automation, and team collaboration.
+  </Overview>
+  <Category>Tools:Utilities Network:Messaging Status:Stable</Category>
+  <WebUI>http://[IP]:[PORT:3000]</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/N85UK/UNRAID_App/main/templates/ultimate-messages.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/N85UK/UNRAID_App/main/icons/ultimate-messages.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled></DateInstalled>
+  <DonateText>Support Development</DonateText>
+  <DonateLink>https://github.com/sponsors/N85UK</DonateLink>
+  <Requires>PostgreSQL 15+ and Redis 7+ databases configured and running</Requires>
+  <Config Name="WebUI Port" Target="3000" Default="3000" Mode="tcp" Description="Web interface and API port" Type="Port" Display="always" Required="true" Mask="false">3000</Config>
+  <Config Name="App Data" Target="/data" Default="/mnt/user/appdata/ultimate-messages" Mode="rw" Description="Application data, logs, and uploads" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/ultimate-messages</Config>
+  <Config Name="Database Host" Target="DB_HOST" Default="postgres" Mode="" Description="PostgreSQL hostname" Type="Variable" Display="always" Required="true" Mask="false">postgres</Config>
+  <Config Name="Database Port" Target="DB_PORT" Default="5432" Mode="" Description="PostgreSQL port" Type="Variable" Display="always" Required="true" Mask="false">5432</Config>
+  <Config Name="Database Name" Target="DB_NAME" Default="ultimate_messages" Mode="" Description="Database name" Type="Variable" Display="always" Required="true" Mask="false">ultimate_messages</Config>
+  <Config Name="Database User" Target="DB_USER" Default="postgres" Mode="" Description="Database username" Type="Variable" Display="always" Required="true" Mask="false">postgres</Config>
+  <Config Name="Database Password" Target="DB_PASSWORD" Default="" Mode="" Description="Database password (REQUIRED)" Type="Variable" Display="always" Required="true" Mask="true"/>
+  <Config Name="Redis Host" Target="REDIS_HOST" Default="redis" Mode="" Description="Redis hostname" Type="Variable" Display="always" Required="true" Mask="false">redis</Config>
+  <Config Name="Redis Port" Target="REDIS_PORT" Default="6379" Mode="" Description="Redis port" Type="Variable" Display="advanced" Required="true" Mask="false">6379</Config>
+  <Config Name="JWT Secret" Target="JWT_SECRET" Default="" Mode="" Description="JWT secret key (REQUIRED - openssl rand -base64 32)" Type="Variable" Display="always" Required="true" Mask="true"/>
+  <Config Name="Encryption Key" Target="ENCRYPTION_KEY" Default="" Mode="" Description="Encryption key (REQUIRED - openssl rand -base64 32)" Type="Variable" Display="always" Required="true" Mask="true"/>
+  <Config Name="Node Environment" Target="NODE_ENV" Default="production" Mode="" Description="Environment" Type="Variable" Display="advanced" Required="true" Mask="false">production</Config>
+  <Config Name="Log Level" Target="LOG_LEVEL" Default="info" Mode="" Description="Log level (error/warn/info/debug)" Type="Variable" Display="advanced" Required="false" Mask="false">info</Config>
+</Container>
