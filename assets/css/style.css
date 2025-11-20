@@ -1,84 +1,27 @@
-/* Brand palette (N85UK) */
+/* Updated to N85UK palette */
 :root {
-  --brand-900: #001b2e; /* Deep navy */
-  --brand-800: #1d3f58; /* Dark blue-gray */
-  --brand-600: #537692; /* Mute blue */
-  --brand-300: #b3cde4; /* Soft light blue */
-  --bg: #eef3f9;       /* Off-white blue background */
+  --brand-900: #001b2e;
+  --brand-800: #1d3f58;
+  --brand-600: #537692;
+  --brand-300: #b3cde4;
+  --bg: #eef3f9;
   --white: #ffffff;
-
   --text: #001b2e;
   --muted: #537692;
   --card: #ffffff;
   --border: #dfeaf3;
 }
 
-html, body {
-  height: 100%;
-}
-body {
-  background: var(--bg);
-  color: var(--text);
-  font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
-  margin: 0;
-  padding: 0;
-}
-
 .hero {
-  padding: 3rem 1rem;
+  padding: 4rem 1rem;
   background: linear-gradient(180deg, var(--brand-900), var(--brand-800));
   color: var(--white);
-  text-align: center;
 }
 
-.hero h1 {
-  font-size: 2rem;
-  margin: 0 0 0.25rem 0;
-}
+.hero h1 { font-size: 2.5rem }
+.hero .subtitle { color: var(--brand-300); }
 
-.hero .subtitle {
-  margin: 0;
-  opacity: 0.95;
-  color: var(--b3cde4, var(--brand-300));
-}
+.trust-badges { margin-top: 1.25rem }
+.trust-badge { font-size: 0.9rem; padding: 0.5rem 0.75rem; }
 
-.trust-badges {
-  display: flex;
-  gap: 0.5rem;
-  justify-content: center;
-  margin: 1rem 0 2rem 0;
-}
-
-.trust-badge {
-  background: rgba(255,255,255,0.06);
-  color: var(--white);
-  padding: 0.5rem 0.75rem;
-  border-radius: 10px;
-  border: 1px solid rgba(255,255,255,0.06);
-  font-size: 0.9rem;
-}
-
-.main-content {
-  max-width: 1100px;
-  margin: 1.25rem auto;
-  padding: 0.75rem;
-  color: var(--text);
-}
-
-.site-footer {
-  text-align: center;
-  color: var(--muted);
-  margin-top: 3rem;
-  padding: 2rem;
-  border-top: 1px solid var(--border);
-}
-
-.btn {
-  display: inline-block;
-  background: var(--white);
-  color: var(--brand-900);
-  padding: 0.5rem 1rem;
-  border-radius: 6px;
-  text-decoration: none;
-  border: 1px solid var(--border);
-}
+.site-footer { background: linear-gradient(180deg, transparent 0, rgba(0,0,0,0.03) 100%); }
