@@ -1,1 +1,65 @@
-PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPENvbnRhaW5lciB2ZXJzaW9uPSIyIj4KICA8TmFtZT5PY3RvcHVzRW5lcmd5TW9uaXRvcjwvTmFtZT4KICA8UmVwb3NpdG9yeT5naGNyLmlvL244NXVrL29jdG9wdXMtZW5lcmd5LW1vbml0b3I6bGF0ZXN0PC9SZXBvc2l0b3J5PgogIDxSZWdpc3RyeT5odHRwczovL2doY3IuaW8vbjg1dWsvb2N0b3B1cy1lbmVyZ3ktbW9uaXRvcjwvUmVnaXN0cnk+CiAgPE5ldHdvcms+YnJpZGdlPC9OZXR3b3JrPgogIDxNeUlQLz4KICA8U2hlbGw+c2g8L1NoZWxsPgogIDxQcml2aWxlZ2VkPmZhbHNlPC9Qcml2aWxlZ2VkPgogIDxTdXBwb3J0Pmh0dHBzOi8vZm9ydW1zLnVucmFpZC5uZXQvdG9waWMvMTk1MjExLXN1cHBvcnQtbjg1dWstb2N0b3B1cy1lbmVyZ3ktbW9uaXRvci88L1N1cHBvcnQ+CiAgPFByb2plY3Q+aHR0cHM6Ly9naXRodWIuY29tL044NVVLL1VOUkFJRF9BcHBzL3RyZWUvbWFpbi9BcHBzL09jdG9wdXNfRW5lcmd5X01vbml0b3I8L1Byb2plY3Q+CiAgPE92ZXJ2aWV3PgogICAgT2N0b3B1cyBFbmVyZ3kgTW9uaXRvciAtIFRyYWNrIHlvdXIgZW5lcmd5IHVzYWdlIGFuZCBjb3N0cyBpbiByZWFsLXRpbWUuCiAgICAKICAgIEZlYXR1cmVzOgogICAgLSBBdXRvbWF0aWMgbWV0ZXIgZGlzY292ZXJ5IGZyb20geW91ciBPY3RvcHVzIGFjY291bnQKICAgIC0gSGFsZi1ob3VybHkgZWxlY3RyaWNpdHkgYW5kIGdhcyBjb25zdW1wdGlvbiB0cmFja2luZwogICAgLSBBdXRvbWF0aWMgdGFyaWZmIHJhdGUgZmV0Y2hpbmcgKEFnaWxlLCBGbGV4aWJsZSwgZXRjLikKICAgIC0gQ29zdCBjYWxjdWxhdGlvbnMgcGVyIGludGVydmFsLCBkYXksIHdlZWssIG1vbnRoCiAgICAtIFByb21ldGhldXMgbWV0cmljcyBhdCAvbWV0cmljcwogICAgLSBHcmFmYW5hLXJlYWR5IFNRTGl0ZSBkYXRhYmFzZQogICAgLSBSRVNUZnVsIEFQSSBmb3IgY3VzdG9tIGludGVncmF0aW9ucwogICAgLSBPcHRpb25hbCBHcmFwaFFMIHN1cHBvcnQgZm9yIEhvbWUgTWluaSByZWFsLXRpbWUgZGF0YQogICAgCiAgICBJbml0aWFsIHNldHVwIGJhY2tmaWxscyA0MDAgZGF5cyBvZiBkYXRhLiBJbmNyZW1lbnRhbCBzeW5jIHJ1bnMgZXZlcnkgMzAgbWludXRlcy4KICA8L092ZXJ2aWV3PgogIDxDYXRlZ29yeT5Ub29sczpVdGlsaXRpZXM8L0NhdGVnb3J5PgogIDxXZWJVST5odHRwOi8vW0lQOl06W1BPUlQ6ODA4OF0vZG9jczwvV2ViVUk+CiAgPFRlbXBsYXRlVVJMPmh0dHBzOi8vcmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbS9uODV1ay91bnJhaWRfYXBwcy9tYWluL0FwcHMvT2N0b3B1c19FbmVyZ3VfTW9uaXRvci91bnJhaWQvdGVtcGxhdGUueG1sPC9UZW1wbGF0ZVVSTD4KICA8SWNvbj5odHRwczovL3Jhdy5naXRodWJ1c2VyY29udGVudC5jb20vTjg1VUsvVU5SQUlEX0FwcHMvbWFpbi9BcHBzL09jdG9wdXNfRW5lcmd5X01vbml0b3IvaWNvbi5wbmc8L0ljb24+CiAgPEV4dHJhUGFyYW1zLz4KICA8UG9zdEFyZ3MvPgogIDxDUFVzZXQvPgogIDxEYXRlSW5zdGFsbGVkPjwvRGF0ZUluc3RhbGxlZD4KICA8RG9uYXRlVGV4dC8+CiAgPERvbmF0ZUxpbmsvPgogIDxSZXF1aXJlcy8+CiAgPENvbmZpZyBOYW1lPSJXZWIgVUkgUG9ydCIgVGFyZ2V0PSI4MDg4IiBEZWZhdWx0PSI4MDg4IiBNb2RlPSJ0Y3AiIERlc2NyaXB0aW9uPSJIVFRQIHBvcnQgZm9yIEFQSSBhbmQgd2ViIGludGVyZmFjZS4gRGVmYXVsdCBpcyA4MDg4LiBEbyBub3QgdXNlIDkwOTAgaWYgeW91IGhhdmUgUHJvbWV0aGV1cyBpbnN0YWxsZWQuIiBUeXBlPSJQb3J0IiBEaXNwbGF5PSJhbHdheXMiIFJlcXVpcmVkPSJ0cnVlIiBNYXNrPSJmYWxzZSI+ODA4ODwvQ29uZmlnPgogIDxDb25maWcgTmFtZT0iRGF0YSBEaXJlY3RvcnkiIFRhcmdldD0iL2RhdGEiIERlZmF1bHQ9Ii9tbnQvdXNlci9hcHBkYXRhL29jdG9wdXMtZW5lcmd5LW1vbml0b3IiIE1vZGU9InJ3IiBEZXNjcmlwdGlvbj0iUGVyc2lzdGVudCBzdG9yYWdlIGZvciBTUUxpdGUgZGF0YWJhc2UgYW5kIGFwcGxpY2F0aW9uIGRhdGEiIFR5cGU9IlBhdGgiIERpc3BsYXk9ImFsd2F5cyIgUmVxdWlyZWQ9InRydWUiIE1hc2s9ImZhbHNlIj4vbW50L3VzZXIvYXBwZGF0YS9vY3RvcHVzLWVuZXJneS1tb25pdG9yPC9Db25maWc+CiAgCiAgPCEtLSBSZXF1aXJlZCBDb25maWd1cmF0aW9uIC0tPgogIDxDb25maWcgTmFtZT0iQWNjb3VudCBOdW1iZXIiIFRhcmdldD0iT0NUT1BVU19BQ0NPVU5UX05VTUJFUiIgRGVmYXVsdD0iIiBNb2RlPSIiIERlc2NyaXB0aW9uPSJZb3VyIE9jdG9wdXMgRW5lcmd5IGFjY291bnQgbnVtYmVyIChmb3JtYXQ6IEEtMTIzNEFCQ0QpIiBUeXBlPSJWYXJpYWJsZSIgRGlzcGxheT0iYWx3YXlzIiBSZXF1aXJlZD0idHJ1ZSIgTWFzaz0iZmFsc2UiLz4KICAKICA8IS0tIEF1dGhlbnRpY2F0aW9uIChjaG9vc2Ugb25lIG1ldGhvZCkgLS0+CiAgPENvbmZpZyBOYW1lPSJBUEkgS2V5IiBUYXJnZXQ9Ik9DVE9QVVNfQVBJX0tFWSIgRGVmYXVsdD0iIiBNb2RlPSIiIERlc2NyaXB0aW9uPSJZb3VyIE9jdG9wdXMgQVBJIGtleSAoYWx0ZXJuYXRpdmU6IHVzZSBCZWFyZXIgVG9rZW4pIiBUeXBlPSJWYXJpYWJsZSIgRGlzcGxheT0iYWx3YXlzIiBSZXF1aXJlZD0iZmFsc2UiIE1hc2s9InRydWUiLz4KICA8Q29uZmlnIE5hbWU9IkJlYXJlciBUb2tlbiIgVGFyZ2V0PSJPQ1RPUFVTX0JFQVJFUl9UT0tFTiIgRGVmYXVsdD0iIiBNb2RlPSIiIERlc2NyaXB0aW9uPSJZb3VyIE9jdG9wdXMgYmVhcmVyIHRva2VuIChwcmVmZXJyZWQgYXV0aCBtZXRob2QpIiBUeXBlPSJWYXJpYWJsZSIgRGlzcGxheT0iYWx3YXlzIiBSZXF1aXJlZD0iZmFsc2UiIE1hc2s9InRydWUiLz4KICA8Q29uZmlnIE5hbWU9IkF1dGggTW9kZSIgVGFyZ2V0PSJPQ1RPUFVTX0FVVEhfTU9ERSIgRGVmYXVsdD0iYmVhcmVyIiBNb2RlPSIiIERlc2NyaXB0aW9uPSJBdXRoZW50aWNhdGlvbiBtb2RlOiBiZWFyZXIgKHByZWZlcnJlZCkgb3IgYmFzaWMiIFR5cGU9IlZhcmlhYmxlIiBEaXNwbGF5PSJhbHdheXMiIFJlcXVpcmVkPSJ0cnVlIiBNYXNrPSJmYWxzZSI+YmVhcmVyPC9Db25maWc+CiAgCiAgPCEtLSBPcHRpb25hbDogTWV0ZXIgRGV0YWlscyAoYXV0by1kaXNjb3ZlcmVkIGlmIG5vdCBwcm92aWRlZCkgLS0+CiAgPENvbmZpZyBOYW1lPSJNUEFOIiBUYXJnZXQ9Ik1QQU4iIERlZmF1bHQ9IiIgTW9kZT0iIiBEZXNjcmlwdGlvbj0iRWxlY3RyaWNpdHkgbWV0ZXIgTVBBTiAoYXV0by1kaXNjb3ZlcmVkIGlmIGJsYW5rKSIgVHlwZT0iVmFyaWFibGUiIERpc3BsYXk9ImFkdmFuY2VkIiBSZXF1aXJlZD0iZmFsc2UiIE1hc2s9ImZhbHNlIi8+CjwvQ29udGFpbmVyPg==
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>OctopusEnergyMonitor</Name>
+  <Repository>ghcr.io/n85uk/octopus-energy-monitor:latest</Repository>
+  <Registry>https://ghcr.io/n85uk/octopus-energy-monitor</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/195211-support-n85uk-octopus-energy-monitor/</Support>
+  <Project>https://github.com/N85UK/UNRAID_Apps/tree/main/Apps/Octopus_Energy_Monitor</Project>
+  <Overview>
+    Octopus Energy Monitor - Track your energy usage and costs in real-time.
+    
+    Features:
+    - Automatic meter discovery from your Octopus account
+    - Half-hourly electricity and gas consumption tracking
+    - Automatic tariff rate fetching (Agile, Flexible, etc.)
+    - Cost calculations per interval, day, week, month
+    - Prometheus metrics at /metrics
+    - Grafana-ready SQLite database
+    - RESTful API for custom integrations
+    - Optional GraphQL support for Home Mini real-time data
+    
+    Initial setup backfills 400 days of data. Incremental sync runs every 30 minutes.
+  </Overview>
+  <Category>Tools:Utilities</Category>
+  <WebUI>http://[IP]:[PORT:8088]/docs</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/N85UK/UNRAID_Apps/main/Apps/Octopus_Energy_Monitor/unraid/template.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/N85UK/UNRAID_Apps/main/Apps/Octopus_Energy_Monitor/icon.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled></DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Requires/>
+  <Config Name="Web UI Port" Target="8088" Default="8088" Mode="tcp" Description="HTTP port for API and web interface. Default is 8088. Do not use 9090 if you have Prometheus installed." Type="Port" Display="always" Required="true" Mask="false">8088</Config>
+  <Config Name="Data Directory" Target="/data" Default="/mnt/user/appdata/octopus-energy-monitor" Mode="rw" Description="Persistent storage for SQLite database and application data" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/octopus-energy-monitor</Config>
+  
+  <!-- Required Configuration -->
+  <Config Name="Account Number" Target="OCTOPUS_ACCOUNT_NUMBER" Default="" Mode="" Description="Your Octopus Energy account number (format: A-1234ABCD)" Type="Variable" Display="always" Required="true" Mask="false"/>
+  
+  <!-- Authentication (choose one method) -->
+  <Config Name="API Key" Target="OCTOPUS_API_KEY" Default="" Mode="" Description="Your Octopus API key (alternative: use Bearer Token)" Type="Variable" Display="always" Required="false" Mask="true"/>
+  <Config Name="Bearer Token" Target="OCTOPUS_BEARER_TOKEN" Default="" Mode="" Description="Your Octopus bearer token (preferred auth method)" Type="Variable" Display="always" Required="false" Mask="true"/>
+  <Config Name="Auth Mode" Target="OCTOPUS_AUTH_MODE" Default="bearer" Mode="" Description="Authentication mode: bearer (preferred) or basic" Type="Variable" Display="always" Required="true" Mask="false">bearer</Config>
+  
+  <!-- Optional: Meter Details (auto-discovered if not provided) -->
+  <Config Name="MPAN" Target="MPAN" Default="" Mode="" Description="Electricity meter MPAN (auto-discovered if blank)" Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="MPRN" Target="MPRN" Default="" Mode="" Description="Gas meter MPRN (auto-discovered if blank)" Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="Electricity Serial" Target="ELEC_SERIAL" Default="" Mode="" Description="Electricity meter serial number (auto-discovered if blank)" Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="Gas Serial" Target="GAS_SERIAL" Default="" Mode="" Description="Gas meter serial number (auto-discovered if blank)" Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  
+  <!-- Application Settings -->
+  <Config Name="Database URL" Target="DB_URL" Default="sqlite+aiosqlite:////data/octopus.db" Mode="" Description="Database connection string (default: SQLite in /data)" Type="Variable" Display="advanced" Required="false" Mask="false">sqlite+aiosqlite:////data/octopus.db</Config>
+  <Config Name="Timezone" Target="TIMEZONE" Default="Europe/London" Mode="" Description="Timezone for data display (UTC used for storage)" Type="Variable" Display="always" Required="false" Mask="false">Europe/London</Config>
+  <Config Name="Log Level" Target="LOG_LEVEL" Default="INFO" Mode="" Description="Logging level: DEBUG, INFO, WARNING, ERROR" Type="Variable" Display="advanced" Required="false" Mask="false">INFO</Config>
+  <Config Name="Sync Interval" Target="SYNC_INTERVAL_CRON" Default="*/30 * * * *" Mode="" Description="Cron expression for incremental sync (default: every 30 min)" Type="Variable" Display="advanced" Required="false" Mask="false">*/30 * * * *</Config>
+  <Config Name="Backfill Days" Target="BACKFILL_DAYS" Default="400" Mode="" Description="Number of days to backfill on first run" Type="Variable" Display="advanced" Required="false" Mask="false">400</Config>
+  
+  <!-- GraphQL (Experimental) -->
+  <Config Name="Enable GraphQL" Target="ENABLE_GRAPHQL" Default="false" Mode="" Description="Enable GraphQL for near-real-time data (requires Home Mini)" Type="Variable" Display="advanced" Required="false" Mask="false">false</Config>
+  <Config Name="GraphQL Token" Target="OCTOPUS_GRAPHQL_TOKEN" Default="" Mode="" Description="GraphQL token for Home Mini integration (if enabled)" Type="Variable" Display="advanced" Required="false" Mask="true"/>
+</Container>
