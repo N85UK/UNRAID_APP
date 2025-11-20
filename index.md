@@ -7,126 +7,154 @@ author: N85UK
 lang: en-GB
 ---
 
-<div class="hero">
+<div class="hero-section">
   <h1>UNRAID Applications — N85UK</h1>
   <p class="subtitle">Production-ready Docker containers for servers</p>
   <p class="version-info">Last Updated: November 4, 2025 | 5 Applications</p>
+  
+  <div class="trust-badges">
+    <span class="badge">MIT Licensed</span>
+    <span class="badge">Maintained</span>
+    <span class="badge">Multi-Arch</span>
+    <span class="badge">GHCR</span>
+  </div>
 </div>
 
-<div class="trust-badges">
-  <span class="trust-badge">MIT Licensed</span>
-  <span class="trust-badge">Maintained</span>
-  <span class="trust-badge">Multi-Arch</span>
-  <span class="trust-badge">GHCR</span>
+<div class="apps-grid">
+
+<article class="card">
+  <h2>Ultimate Messages</h2>
+  <p><strong>Enterprise SMS platform with multi-provider support (AA + AWS)</strong></p>
+  <p><strong>What it does:</strong> Unified messaging with intelligent routing, team collaboration, and automation</p>
+  
+  <h3>Key Features:</h3>
+  <ul>
+    <li>Multi-provider (Andrews & Arnold + AWS)</li>
+    <li>Smart routing & cost optimization</li>
+    <li>Team collaboration with RBAC</li>
+    <li>Automation & analytics</li>
+    <li>Modern UI with dark mode</li>
+  </ul>
+  
+  <p class="requirements"><strong>Requirements:</strong> PostgreSQL 15+, Redis 7+</p>
+  
+  <div class="card-actions">
+    <a href="https://raw.githubusercontent.com/N85UK/UNRAID_App/main/templates/ultimate-messages.xml" class="btn btn-primary">Template</a>
+    <a href="https://github.com/N85UK/UNRAID_Apps/tree/main/Apps/Ultimate_Messages" class="btn">Docs</a>
+    <a href="https://github.com/N85UK/UNRAID_Apps/pkgs/container/ultimate-messages" class="btn">Image</a>
+  </div>
+</article>
+
+<article class="card">
+  <h2>AA SMS App</h2>
+  <p><strong>Andrews & Arnold SMS management platform</strong></p>
+  <p><strong>What it does:</strong> Send and receive SMS through Andrews & Arnold with conversation threading</p>
+  
+  <h3>Key Features:</h3>
+  <ul>
+    <li>Bi-directional SMS</li>
+    <li>Contact management</li>
+    <li>Real-time updates</li>
+    <li>Clean Material-UI interface</li>
+  </ul>
+  
+  <p class="requirements"><strong>Requirements:</strong> MariaDB/MySQL, Andrews & Arnold account</p>
+  
+  <div class="card-actions">
+    <a href="https://raw.githubusercontent.com/N85UK/UNRAID_App/main/templates/aa-sms-app.xml" class="btn btn-primary">Template</a>
+    <a href="https://github.com/N85UK/UNRAID_Apps/tree/main/Apps/AA_SMS_App" class="btn">Docs</a>
+    <a href="https://github.com/N85UK/UNRAID_Apps/pkgs/container/aa-sms-app" class="btn">Image</a>
+  </div>
+</article>
+
+<article class="card">
+  <h2>AWS Ultimate Messaging</h2>
+  <p><strong>AWS SNS/Pinpoint SMS platform</strong></p>
+  <p><strong>What it does:</strong> Modern two-way SMS using AWS services with real-time updates</p>
+  
+  <h3>Key Features:</h3>
+  <ul>
+    <li>AWS SNS/Pinpoint integration</li>
+    <li>WebSocket real-time messaging</li>
+    <li>Multi-user authentication</li>
+    <li>Auto-replies & templates</li>
+    <li>Analytics dashboard</li>
+  </ul>
+  
+  <p class="requirements"><strong>Requirements:</strong> MariaDB/MySQL, AWS account</p>
+  
+  <div class="card-actions">
+    <a href="https://raw.githubusercontent.com/N85UK/UNRAID_App/main/templates/aws-ultimate-messaging.xml" class="btn btn-primary">Template</a>
+    <a href="https://github.com/N85UK/UNRAID_Apps/tree/main/Apps/AWS_Ultimate_Messaging" class="btn">Docs</a>
+    <a href="https://github.com/N85UK/UNRAID_Apps/pkgs/container/aws-ultimate-messaging" class="btn">Image</a>
+  </div>
+</article>
+
+<article class="card">
+  <h2>X Webhook Receiver</h2>
+  <p><strong>Event processing for UniFi Protect & custom webhooks</strong></p>
+  <p><strong>What it does:</strong> Process webhooks from UniFi Protect and other services with custom actions</p>
+  
+  <h3>Key Features:</h3>
+  <ul>
+    <li>UniFi Protect smart detections</li>
+    <li>Gotify notifications</li>
+    <li>PostgreSQL logging</li>
+    <li>Custom webhook handlers</li>
+    <li>Real-time event processing</li>
+  </ul>
+  
+  <p class="requirements"><strong>Requirements:</strong> PostgreSQL 15+</p>
+  
+  <div class="card-actions">
+    <a href="https://raw.githubusercontent.com/N85UK/UNRAID_App/main/templates/x-webhook-receiver.xml" class="btn btn-primary">Template</a>
+    <a href="https://github.com/N85UK/UNRAID_Apps/tree/main/Apps/X_Webhook-Receiver" class="btn">Docs</a>
+    <a href="https://github.com/N85UK/UNRAID_Apps/pkgs/container/x-webhook-receiver" class="btn">Image</a>
+  </div>
+</article>
+
+<article class="card">
+  <h2>Octopus Energy Monitor</h2>
+  <p><strong>Monitor Octopus Energy consumption & costs</strong></p>
+  <p><strong>What it does:</strong> Track electricity usage and costs from Octopus Energy with Grafana dashboards</p>
+  
+  <h3>Key Features:</h3>
+  <ul>
+    <li>Auto-discover meters</li>
+    <li>Sync consumption data</li>
+    <li>Cost calculations with tariffs</li>
+    <li>SQLite or MySQL support</li>
+    <li>Grafana dashboard templates</li>
+  </ul>
+  
+  <p class="requirements"><strong>Requirements:</strong> SQLite or MySQL, Octopus Energy account</p>
+  
+  <div class="card-actions">
+    <a href="https://raw.githubusercontent.com/N85UK/UNRAID_App/main/templates/octopus-energy-monitor.xml" class="btn btn-primary">Template</a>
+    <a href="https://github.com/N85UK/UNRAID_Apps/tree/main/Apps/Octopus_Energy_Monitor" class="btn">Docs</a>
+    <a href="https://github.com/N85UK/UNRAID_Apps/pkgs/container/octopus-energy-monitor" class="btn">Image</a>
+  </div>
+</article>
+
 </div>
 
-## Ultimate Messages
-**Enterprise SMS platform with multi-provider support (AA + AWS)**
+<section class="installation-section card">
+  <h2>Installation</h2>
+  <ol>
+    <li>Download the template XML file</li>
+    <li>In UNRAID, go to <strong>Docker > Add Container</strong></li>
+    <li>Click <strong>Template repositories</strong> and add: <code>https://github.com/N85UK/UNRAID_App</code></li>
+    <li>Select the app from the dropdown</li>
+    <li>Configure environment variables</li>
+    <li>Click <strong>Apply</strong></li>
+  </ol>
+</section>
 
-**What it does:** Unified messaging with intelligent routing, team collaboration, and automation
-
-**Key Features:**
-- Multi-provider (Andrews & Arnold + AWS)
-- Smart routing & cost optimization  
-- Team collaboration with RBAC
-- Automation & analytics
-- Modern UI with dark mode
-
-**Requirements:** PostgreSQL 15+, Redis 7+
-
-[Template](https://raw.githubusercontent.com/N85UK/UNRAID_App/main/templates/ultimate-messages.xml) | [Docs](https://github.com/N85UK/UNRAID_Apps/tree/main/Apps/Ultimate_Messages) | [Image](https://github.com/N85UK/UNRAID_Apps/pkgs/container/ultimate-messages)
-
----
-
-## AA SMS App
-**Andrews & Arnold SMS management platform**
-
-**What it does:** Send and receive SMS through Andrews & Arnold with conversation threading
-
-**Key Features:**
-- Bi-directional SMS
-- Contact management
-- Real-time updates
-- Clean Material-UI interface
-
-**Requirements:** MariaDB/MySQL, Andrews & Arnold account
-
-[Template](https://raw.githubusercontent.com/N85UK/UNRAID_App/main/templates/aa-sms-app.xml) | [Docs](https://github.com/N85UK/UNRAID_Apps/tree/main/Apps/AA_SMS_App) | [Image](https://github.com/N85UK/UNRAID_Apps/pkgs/container/aa-sms-app)
-
----
-
-## AWS Ultimate Messaging
-**AWS SNS/Pinpoint SMS platform**
-
-**What it does:** Modern two-way SMS using AWS services with real-time updates
-
-**Key Features:**
-- AWS SNS/Pinpoint integration
-- WebSocket real-time messaging
-- Multi-user authentication
-- Auto-replies & templates
-- Analytics dashboard
-
-**Requirements:** MariaDB/MySQL, AWS account
-
-[Template](https://raw.githubusercontent.com/N85UK/UNRAID_App/main/templates/aws-ultimate-messaging.xml) | [Docs](https://github.com/N85UK/UNRAID_Apps/tree/main/Apps/AWS_Ultimate_Messaging) | [Image](https://github.com/N85UK/UNRAID_Apps/pkgs/container/aws-ultimate-messaging)
-
----
-
-## X Webhook Receiver
-**Event processing for UniFi Protect & custom webhooks**
-
-**What it does:** Process webhooks from UniFi Protect and other services with custom actions
-
-**Key Features:**
-- UniFi Protect smart detections
-- Gotify notifications
-- PostgreSQL logging
-- Custom webhook handlers
-- Real-time event processing
-
-**Requirements:** PostgreSQL 15+
-
-[Template](https://raw.githubusercontent.com/N85UK/UNRAID_App/main/templates/x-webhook-receiver.xml) | [Docs](https://github.com/N85UK/UNRAID_Apps/tree/main/Apps/X_Webhook-Receiver) | [Image](https://github.com/N85UK/UNRAID_Apps/pkgs/container/x-webhook-receiver)
-
----
-
-## Octopus Energy Monitor
-**Monitor Octopus Energy consumption & costs**
-
-**What it does:** Track electricity usage and costs from Octopus Energy with Grafana dashboards
-
-**Key Features:**
-- Auto-discover meters
-- Sync consumption data
-- Cost calculations with tariffs
-- SQLite or MySQL support
-- Grafana dashboard templates
-
-**Requirements:** SQLite or MySQL, Octopus Energy account
-
-[Template](https://raw.githubusercontent.com/N85UK/UNRAID_App/main/templates/octopus-energy-monitor.xml) | [Docs](https://github.com/N85UK/UNRAID_Apps/tree/main/Apps/Octopus_Energy_Monitor) | [Image](https://github.com/N85UK/UNRAID_Apps/pkgs/container/octopus-energy-monitor)
-
----
-
-## Installation
-
-1. Download the template XML file
-2. In UNRAID, go to **Docker > Add Container**
-3. Click **Template repositories** and add:
-   `https://github.com/N85UK/UNRAID_App`
-4. Select the app from the dropdown
-5. Configure environment variables
-6. Click **Apply**
-
-## Support
-
-- **Issues:** [GitHub Issues](https://github.com/N85UK/UNRAID_Apps/issues)
-- **Source:** [UNRAID_Apps Repository](https://github.com/N85UK/UNRAID_Apps)
-- **License:** MIT
-
-
-<footer style="text-align: center; margin-top: 3rem; padding: 2rem; border-top: 1px solid #e5e7eb;">
-  <p>Made for the UNRAID community</p>
-  <p><a href="https://github.com/N85UK">GitHub</a> | <a href="https://github.com/N85UK/UNRAID_Apps/blob/main/LICENSE">License</a></p>
-</footer>
+<section class="support-section card">
+  <h2>Support</h2>
+  <ul>
+    <li><strong>Issues:</strong> <a href="https://github.com/N85UK/UNRAID_Apps/issues">GitHub Issues</a></li>
+    <li><strong>Source:</strong> <a href="https://github.com/N85UK/UNRAID_Apps">UNRAID_Apps Repository</a></li>
+    <li><strong>License:</strong> MIT</li>
+  </ul>
+</section>
