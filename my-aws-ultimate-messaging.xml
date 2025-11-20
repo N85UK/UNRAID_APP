@@ -1,1 +1,89 @@
-PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPENvbnRhaW5lciB2ZXJzaW9uPSIyIj4KICA8TmFtZT5BV1MgVWx0aW1hdGUgTWVzc2FnaW5nPC9OYW1lPgogIDxSZXBvc2l0b3J5Pm44NXVrL2F3cy11bHRpbWF0ZS1tZXNzYWdpbmc8L1JlcG9zaXRvcnk+CiAgPFJlZ2lzdHJ5Pmh0dHBzOi8vaHViLmRvY2tlci5jb20wci9uODV1ay9hd3MtdWx0aW1hdGUtbWVzc2FnaW5nPC9SZWdpc3RyeT4KICA8TmV0d29yaz5icmlkZ2U8L05ldHdvcms+CiAgPFNoZWxsPnNoPC9TaGVsbD4KICA8UHJpdmlsZWdlZD5mYWxzZTwvUHJpdmlsZWdlZD4KICA8U3VwcG9ydD5odHRwczovL2dpdGh1Yi5jb20vTjg1VUsvVU5SQUlEX0FwcHMvaXNzdWVzPC9TdXBwb3J0PgogIDxQcm9qZWN0Pmh0dHBzOi8vYXBwcy5uODUudWs8L1Byb2plY3Q+CiAgPE92ZXJ2aWV3PkEgY29tcHJlaGVuc2l2ZSBtZXNzYWdpbmcgc29sdXRpb24gdXNpbmcgQVdTIHNlcnZpY2VzLjwvT3ZlcnZpZXc+CiAgPENhdGVnb3J5PlRvb2xzOjwvQ2F0ZWdvcnk+CiAgPFdlYlVJPmh0dHA6Ly9bSVA6XTpbMzAwMF08L1dlYlVJPgogIDxJY29uPmh0dHBzOi8vcmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbS9uODV1ay91bnJhaWRfYXBwcy9tYWluL0FwcHMvQVdTX1VsdGltYXRlX01lc3NhZ2luZy9pY29uLnBuZzwvSWNvbj4KICA8Q29uZmlnIE5hbWU9IldlYiBVSSBQb3J0IiBUYXJnZXQ9IjMwMDAiIERlZmF1bHQ9IjMwMDAiIE1vZGU9InRjcCIgRGVzY3JpcHRpb249IlBvcnQgZm9yIHRoZSBXZWIgVUkiIFR5cGU9IlBvcnQiIERpc3BsYXk9ImFsd2F5cyIgUmVxdWlyZWQ9InRydWUiIE1hc2s9ImZhbHNlIj4zMDAwPC9Db25maWc+CiAgPENvbmZpZyBOYW1lPSJBV1MgUmVnaW9uIiBUYXJnZXQ9IkFXU19SRUdJT04iIERlZmF1bHQ9InVzLWVhc3QtMSIgTW9kZT0iIiBEZXNjcmlwdGlvbj0iQVdMIFJlZ2lvbiIgVHlwZT0iVmFyaWFibGUiIERpc3BsYXk9ImFsd2F5cyIgUmVxdWlyZWQ9InRydWUiIE1hc2s9ImZhbHNlIj51cy1lYXN0LTE8L0NvbmZpZz4KPC9Db250YWluZXI+
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>AWS-Ultimate-Messaging</Name>
+  <Repository>ghcr.io/n85uk/aws-ultimate-messaging:latest</Repository>
+  <Registry>https://github.com/N85UK/UNRAID_Apps/pkgs/container/aws-ultimate-messaging</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/195210-support-n85uk-aws-ultimate-messaging/</Support>
+  <Project>https://github.com/N85UK/UNRAID_Apps</Project>
+  <Overview>
+    AWS Ultimate Messaging is a comprehensive, modern SMS management platform that combines bi-directional messaging, 
+    real-time WebSocket updates, multi-user authentication, and keyword-based auto-replies. Built with React, 
+    Node.js, and MariaDB, it provides enterprise-grade SMS capabilities through AWS SNS/Pinpoint.
+
+    Features:
+    - Modern React UI with three-pane conversation layout
+    - Real-time messaging via WebSockets
+    - Multi-user authentication (Admin/User roles)
+    - Bi-directional SMS (send/receive)
+    - Keyword-based auto-replies
+    - Message analytics and statistics
+    - AXYN Theme with Light/Dark mode
+    - Enterprise security (JWT, bcrypt, rate limiting)
+
+    This application replaces AWS EUM and AWS 2-Way SMS with a single, unified platform.
+  </Overview>
+  <Category>Tools:Utilities Network:Messaging</Category>
+  <WebUI>http://[IP]:[PORT:3000]</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/N85UK/UNRAID_Apps/main/Apps/AWS_Ultimate_Messaging/my-aws-ultimate-messaging.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/N85UK/UNRAID_Apps/main/Apps/AWS_Ultimate_Messaging/icon.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled></DateInstalled>
+  <DonateText>Support Development</DonateText>
+  <DonateLink>https://github.com/sponsors/N85UK</DonateLink>
+  <Requires>
+    MariaDB container or external database instance configured and running
+  </Requires>
+  <Config Name="WebUI Port" Target="3000" Default="3000" Mode="tcp" Description="Web interface port" Type="Port" Display="always" Required="true" Mask="false">3000</Config>
+  
+  <!-- User/Group Configuration -->
+  <Config Name="PUID" Target="PUID" Default="99" Mode="" Description="User ID for container process (99=nobody, standard for Unraid)" Type="Variable" Display="advanced-hide" Required="false" Mask="false">99</Config>
+  <Config Name="PGID" Target="PGID" Default="100" Mode="" Description="Group ID for container process (100=users, standard for Unraid)" Type="Variable" Display="advanced-hide" Required="false" Mask="false">100</Config>
+  
+  <!-- Database Configuration -->
+  <Config Name="Database Host" Target="DB_HOST" Default="mariadb" Mode="" Description="MariaDB hostname or IP (use container name if on same Docker network)" Type="Variable" Display="always" Required="true" Mask="false">mariadb</Config>
+  <Config Name="Database Port" Target="DB_PORT" Default="3306" Mode="" Description="MariaDB port" Type="Variable" Display="always" Required="true" Mask="false">3306</Config>
+  <Config Name="Database Name" Target="DB_NAME" Default="aws_messaging" Mode="" Description="Database name" Type="Variable" Display="always" Required="true" Mask="false">aws_messaging</Config>
+  <Config Name="Database User" Target="DB_USER" Default="aws_user" Mode="" Description="Database username" Type="Variable" Display="always" Required="true" Mask="false">aws_user</Config>
+  <Config Name="Database Password" Target="DB_PASSWORD" Default="" Mode="" Description="Database password" Type="Variable" Display="always" Required="true" Mask="true"></Config>
+  
+  <!-- AWS Configuration -->
+  <Config Name="AWS Region" Target="AWS_REGION" Default="us-east-1" Mode="" Description="AWS region for SNS/Pinpoint (e.g., us-east-1, eu-west-1)" Type="Variable" Display="always" Required="true" Mask="false">us-east-1</Config>
+  <Config Name="AWS Access Key ID" Target="AWS_ACCESS_KEY_ID" Default="" Mode="" Description="AWS IAM access key with SNS/Pinpoint permissions" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="AWS Secret Access Key" Target="AWS_SECRET_ACCESS_KEY" Default="" Mode="" Description="AWS IAM secret access key" Type="Variable" Display="always" Required="true" Mask="true"></Config>
+  
+  <!-- Security Configuration -->
+  <Config Name="JWT Secret" Target="JWT_SECRET" Default="" Mode="" Description="Secret key for JWT tokens (min 32 characters, generate with: openssl rand -base64 32)" Type="Variable" Display="always" Required="true" Mask="true"></Config>
+  <Config Name="Session Secret" Target="SESSION_SECRET" Default="" Mode="" Description="Secret key for sessions (min 32 characters, generate with: openssl rand -base64 32)" Type="Variable" Display="always" Required="true" Mask="true"></Config>
+  
+  <!-- Application Configuration -->
+  <Config Name="Application URL" Target="APP_URL" Default="http://localhost:3000" Mode="" Description="Public URL for the application (used for webhooks)" Type="Variable" Display="always" Required="false" Mask="false">http://localhost:3000</Config>
+  <Config Name="Webhook URL" Target="WEBHOOK_URL" Default="" Mode="" Description="Full webhook URL for AWS SNS/Pinpoint (e.g., https://yourdomain.com/api/webhooks/pinpoint)" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  
+  <!-- Admin User (Initial Setup) -->
+  <Config Name="Admin Username" Target="ADMIN_USERNAME" Default="admin" Mode="" Description="Initial admin username (created on first run)" Type="Variable" Display="always" Required="false" Mask="false">admin</Config>
+  <Config Name="Admin Password" Target="ADMIN_PASSWORD" Default="Admin123!" Mode="" Description="Initial admin password (change after first login)" Type="Variable" Display="always" Required="false" Mask="true">Admin123!</Config>
+  <Config Name="Admin Email" Target="ADMIN_EMAIL" Default="admin@example.com" Mode="" Description="Initial admin email address" Type="Variable" Display="always" Required="false" Mask="false">admin@example.com</Config>
+  
+  <!-- Advanced Configuration -->
+  <Config Name="Node Environment" Target="NODE_ENV" Default="production" Mode="" Description="Node.js environment (production/development)" Type="Variable" Display="advanced" Required="false" Mask="false">production</Config>
+  <Config Name="Log Level" Target="LOG_LEVEL" Default="info" Mode="" Description="Logging level (error, warn, info, debug)" Type="Variable" Display="advanced" Required="false" Mask="false">info</Config>
+  <Config Name="Rate Limit Window" Target="RATE_LIMIT_WINDOW_MS" Default="900000" Mode="" Description="Rate limiting window in milliseconds (default: 15 minutes)" Type="Variable" Display="advanced" Required="false" Mask="false">900000</Config>
+  <Config Name="Rate Limit Max Requests" Target="RATE_LIMIT_MAX_REQUESTS" Default="100" Mode="" Description="Maximum requests per rate limit window" Type="Variable" Display="advanced" Required="false" Mask="false">100</Config>
+  <Config Name="Database Connection Limit" Target="DB_CONNECTION_LIMIT" Default="10" Mode="" Description="Maximum database connections" Type="Variable" Display="advanced" Required="false" Mask="false">10</Config>
+  
+  <!-- Volumes -->
+  <Config Name="Application Logs" Target="/app/logs" Default="/mnt/user/appdata/aws-ultimate-messaging/logs" Mode="rw" Description="Container Path: /app/logs" Type="Path" Display="advanced" Required="false" Mask="false">/mnt/user/appdata/aws-ultimate-messaging/logs</Config>
+  <Config Name="Uploads" Target="/app/uploads" Default="/mnt/user/appdata/aws-ultimate-messaging/uploads" Mode="rw" Description="Container Path: /app/uploads" Type="Path" Display="advanced" Required="false" Mask="false">/mnt/user/appdata/aws-ultimate-messaging/uploads</Config>
+  
+  <!-- Labels -->
+  <Labels>
+    <Label>com.github.n85uk.aws-ultimate-messaging.version="1.0.0"</Label>
+    <Label>maintainer="N85UK"</Label>
+  </Labels>
+</Container>
