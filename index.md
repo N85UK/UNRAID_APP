@@ -8,21 +8,19 @@ lang: en-GB
 ---
 
 <div class="hero">
-  <h1>🚀 UNRAID Applications</h1>
-  <p class="subtitle">Production-ready Docker containers for your server</p>
+  <h1>UNRAID Applications — N85UK</h1>
+  <p class="subtitle">Production-ready Docker containers for servers</p>
   <p class="version-info">Last Updated: November 4, 2025 | 5 Applications</p>
 </div>
 
 <div class="trust-badges">
-  <span class="trust-badge">✅ MIT Licensed</span>
-  <span class="trust-badge">🔒 Maintained</span>
-  <span class="trust-badge">📦 Multi-Arch</span>
-  <span class="trust-badge">🐳 GHCR</span>
+  <span class="trust-badge">MIT Licensed</span>
+  <span class="trust-badge">Maintained</span>
+  <span class="trust-badge">Multi-Arch</span>
+  <span class="trust-badge">GHCR</span>
 </div>
 
----
-
-## 💬 Ultimate Messages
+## Ultimate Messages
 **Enterprise SMS platform with multi-provider support (AA + AWS)**
 
 **What it does:** Unified messaging with intelligent routing, team collaboration, and automation
@@ -36,11 +34,11 @@ lang: en-GB
 
 **Requirements:** PostgreSQL 15+, Redis 7+
 
-[📥 Template](https://raw.githubusercontent.com/N85UK/UNRAID_App/main/templates/ultimate-messages.xml) | [📖 Docs](https://github.com/N85UK/UNRAID_Apps/tree/main/Apps/Ultimate_Messages) | [🐳 Image](https://github.com/N85UK/UNRAID_Apps/pkgs/container/ultimate-messages)
+[Template](https://raw.githubusercontent.com/N85UK/UNRAID_App/main/templates/ultimate-messages.xml) | [Docs](https://github.com/N85UK/UNRAID_Apps/tree/main/Apps/Ultimate_Messages) | [Image](https://github.com/N85UK/UNRAID_Apps/pkgs/container/ultimate-messages)
 
 ---
 
-## 📱 AA SMS App
+## AA SMS App
 **Andrews & Arnold SMS management platform**
 
 **What it does:** Send and receive SMS through Andrews & Arnold with conversation threading
@@ -53,11 +51,11 @@ lang: en-GB
 
 **Requirements:** MariaDB/MySQL, Andrews & Arnold account
 
-[📥 Template](https://raw.githubusercontent.com/N85UK/UNRAID_App/main/templates/aa-sms-app.xml) | [📖 Docs](https://github.com/N85UK/UNRAID_Apps/tree/main/Apps/AA_SMS_App) | [🐳 Image](https://github.com/N85UK/UNRAID_Apps/pkgs/container/aa-sms-app)
+[Template](https://raw.githubusercontent.com/N85UK/UNRAID_App/main/templates/aa-sms-app.xml) | [Docs](https://github.com/N85UK/UNRAID_Apps/tree/main/Apps/AA_SMS_App) | [Image](https://github.com/N85UK/UNRAID_Apps/pkgs/container/aa-sms-app)
 
 ---
 
-## ☁️ AWS Ultimate Messaging
+## AWS Ultimate Messaging
 **AWS SNS/Pinpoint SMS platform**
 
 **What it does:** Modern two-way SMS using AWS services with real-time updates
@@ -71,11 +69,11 @@ lang: en-GB
 
 **Requirements:** MariaDB/MySQL, AWS account
 
-[📥 Template](https://raw.githubusercontent.com/N85UK/UNRAID_App/main/templates/aws-ultimate-messaging.xml) | [📖 Docs](https://github.com/N85UK/UNRAID_Apps/tree/main/Apps/AWS_Ultimate_Messaging) | [🐳 Image](https://github.com/N85UK/UNRAID_Apps/pkgs/container/aws-ultimate-messaging)
+[Template](https://raw.githubusercontent.com/N85UK/UNRAID_App/main/templates/aws-ultimate-messaging.xml) | [Docs](https://github.com/N85UK/UNRAID_Apps/tree/main/Apps/AWS_Ultimate_Messaging) | [Image](https://github.com/N85UK/UNRAID_Apps/pkgs/container/aws-ultimate-messaging)
 
 ---
 
-## 🔔 X Webhook Receiver
+## X Webhook Receiver
 **Event processing for UniFi Protect & custom webhooks**
 
 **What it does:** Process webhooks from UniFi Protect and other services with custom actions
@@ -89,11 +87,11 @@ lang: en-GB
 
 **Requirements:** PostgreSQL 15+
 
-[📥 Template](https://raw.githubusercontent.com/N85UK/UNRAID_App/main/templates/x-webhook-receiver.xml) | [📖 Docs](https://github.com/N85UK/UNRAID_Apps/tree/main/Apps/X_Webhook-Receiver) | [🐳 Image](https://github.com/N85UK/UNRAID_Apps/pkgs/container/x-webhook-receiver)
+[Template](https://raw.githubusercontent.com/N85UK/UNRAID_App/main/templates/x-webhook-receiver.xml) | [Docs](https://github.com/N85UK/UNRAID_Apps/tree/main/Apps/X_Webhook-Receiver) | [Image](https://github.com/N85UK/UNRAID_Apps/pkgs/container/x-webhook-receiver)
 
 ---
 
-## ⚡ Octopus Energy Monitor
+## Octopus Energy Monitor
 **Monitor Octopus Energy consumption & costs**
 
 **What it does:** Track electricity usage and costs from Octopus Energy with Grafana dashboards
@@ -107,28 +105,28 @@ lang: en-GB
 
 **Requirements:** SQLite or MySQL, Octopus Energy account
 
-[📥 Template](https://raw.githubusercontent.com/N85UK/UNRAID_App/main/templates/octopus-energy-monitor.xml) | [📖 Docs](https://github.com/N85UK/UNRAID_Apps/tree/main/Apps/Octopus_Energy_Monitor) | [🐳 Image](https://github.com/N85UK/UNRAID_Apps/pkgs/container/octopus-energy-monitor)
+[Template](https://raw.githubusercontent.com/N85UK/UNRAID_App/main/templates/octopus-energy-monitor.xml) | [Docs](https://github.com/N85UK/UNRAID_Apps/tree/main/Apps/Octopus_Energy_Monitor) | [Image](https://github.com/N85UK/UNRAID_Apps/pkgs/container/octopus-energy-monitor)
 
 ---
 
-## 📦 Installation
+## Installation
 
 1. Download the template XML file
 2. In UNRAID, go to **Docker > Add Container**
-3. Click **Template repositories** and add: `https://github.com/N85UK/UNRAID_App`
+3. Click **Template repositories** and add:
+   `https://github.com/N85UK/UNRAID_App`
 4. Select the app from the dropdown
 5. Configure environment variables
 6. Click **Apply**
 
-## 🆘 Support
+## Support
 
-- **Issues**: [GitHub Issues](https://github.com/N85UK/UNRAID_Apps/issues)
-- **Source**: [GitHub Repository](https://github.com/N85UK/UNRAID_Apps)
-- **License**: MIT
+- **Issues:** [GitHub Issues](https://github.com/N85UK/UNRAID_Apps/issues)
+- **Source:** [UNRAID_Apps Repository](https://github.com/N85UK/UNRAID_Apps)
+- **License:** MIT
 
----
 
 <footer style="text-align: center; margin-top: 3rem; padding: 2rem; border-top: 1px solid #e5e7eb;">
-  <p>Made with ❤️ for the UNRAID community</p>
+  <p>Made for the UNRAID community</p>
   <p><a href="https://github.com/N85UK">GitHub</a> | <a href="https://github.com/N85UK/UNRAID_Apps/blob/main/LICENSE">License</a></p>
 </footer>
