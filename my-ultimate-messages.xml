@@ -11,6 +11,12 @@
   <Project>https://github.com/N85UK/UNRAID_Apps/tree/main/Apps/Ultimate_Messages</Project>
   <Overview>
     Ultimate Messages - Enterprise-grade unified multi-provider SMS platform combining Andrews &amp; Arnold and AWS SNS/Pinpoint with intelligent routing, automation, and team collaboration.
+    
+    Features: Multi-user auth, Dual SMS providers (AA + AWS), Real-time messaging, Contact management, Smart routing, Auto-replies, Templates, Analytics, PWA, Dark mode, Material-UI
+    
+    Requires: PostgreSQL 15+ and Redis 7+ (separate containers)
+    
+    Documentation: https://github.com/N85UK/UNRAID_Apps/tree/main/Apps/Ultimate_Messages
   </Overview>
   <Category>Tools:Utilities Network:Messaging Status:Stable</Category>
   <WebUI>http://[IP]:[PORT:3000]</WebUI>

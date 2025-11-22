@@ -1,0 +1,54 @@
+name: Auto-merge sync PRs
+
+on:
+  pull_request_target:
+    types: [opened, reopened, synchronize, labeled]
+
+permissions:
+  checks: read
+  pull-requests: write
+  contents: read
+
+jobs:
+  automerge:
+    runs-on: ubuntu-latest
+    if: github.actor == 'github-actions[bot]' || github.event.pull_request.user.login == 'N85UK'
+    steps:
+      - name: Check PR title and author
+        id: check
+        run: |
+          echo "PR title: ${{ github.event.pull_request.title }}"
+          if [[ "${{ github.event.pull_request.title }}" != *"chore(sync)"* ]]; then
+            echo "Not a sync PR, exiting"
+            exit 78
+          fi
+          echo "OK"
+
+      - name: Wait for status checks to pass
+        uses: actions/github-script@v6
+        with:
+          script: |
+            const pr = context.payload.pull_request;
+            const sha = pr.head.sha;
+            console.log(`Waiting for checks to be successful on ${sha}`);
+
+            async function waitForSuccess() {
+              for (let i=0;i<30;i++){
+                const { data: combined } = await github.rest.repos.getCombinedStatusForRef({owner: context.repo.owner, repo: context.repo.repo, ref: sha});
+                console.log(`Status: ${combined.state}`);
+                if (combined.state === 'success') return true;
+                if (combined.state === 'failure' || combined.state === 'error') return false;
+                await new Promise(r => setTimeout(r, 10000));
+              }
+              return false;
+            }
+            const ok = await waitForSuccess();
+            if (!ok) throw new Error('Status checks did not finish successful in time');
+
+      - name: Merge PR
+        uses: peter-evans/merge@v4
+        with:
+          # pragma: allowlist secret - GitHub provided token reference
+          token: ${{ secrets.GITHUB_TOKEN }}
+          merge-method: merge
+          commit-title: "chore(sync): Auto-merge synced templates"
