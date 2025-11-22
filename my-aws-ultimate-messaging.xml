@@ -15,14 +15,14 @@
     Node.js, and MariaDB, it provides enterprise-grade SMS capabilities through AWS SNS/Pinpoint.
 
     Features:
-    - Modern React UI with three-pane conversation layout
-    - Real-time messaging via WebSockets
-    - Multi-user authentication (Admin/User roles)
-    - Bi-directional SMS (send/receive)
-    - Keyword-based auto-replies
-    - Message analytics and statistics
-    - AXYN Theme with Light/Dark mode
-    - Enterprise security (JWT, bcrypt, rate limiting)
+    - ✨ Modern React UI with three-pane conversation layout
+    - 🔄 Real-time messaging via WebSockets
+    - 🔐 Multi-user authentication (Admin/User roles)
+    - 💬 Bi-directional SMS (send/receive)
+    - 🤖 Keyword-based auto-replies
+    - 📊 Message analytics and statistics
+    - 🎨 AXYN Theme with Light/Dark mode
+    - 🔒 Enterprise security (JWT, bcrypt, rate limiting)
 
     This application replaces AWS EUM and AWS 2-Way SMS with a single, unified platform.
   </Overview>
