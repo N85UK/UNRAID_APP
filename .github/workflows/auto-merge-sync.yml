@@ -7,7 +7,7 @@ on:
 permissions:
   checks: read
   pull-requests: write
-  contents: read
+  contents: write
 
 jobs:
   automerge:
@@ -25,7 +25,7 @@ jobs:
           echo "OK"
 
       - name: Wait for status checks to pass
-        uses: actions/github-script@v6
+        uses: actions/github-script@v8
         with:
           script: |
             const pr = context.payload.pull_request;
@@ -46,9 +46,14 @@ jobs:
             if (!ok) throw new Error('Status checks did not finish successful in time');
 
       - name: Merge PR
-        uses: peter-evans/merge@v4
+        uses: actions/github-script@v8
         with:
-          # pragma: allowlist secret - GitHub provided token reference
-          token: ${{ secrets.GITHUB_TOKEN }}
-          merge-method: merge
-          commit-title: "chore(sync): Auto-merge synced templates"
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            await github.rest.pulls.merge({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              pull_number: context.payload.pull_request.number,
+              merge_method: 'merge',
+              commit_title: 'chore(sync): Auto-merge synced templates'
+            });
