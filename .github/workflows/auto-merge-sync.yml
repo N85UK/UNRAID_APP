@@ -33,15 +33,43 @@ jobs:
             console.log(`Waiting for checks to be successful on ${sha}`);
 
             async function waitForSuccess() {
-              for (let i=0;i<30;i++){
-                const { data: combined } = await github.rest.repos.getCombinedStatusForRef({owner: context.repo.owner, repo: context.repo.repo, ref: sha});
-                console.log(`Status: ${combined.state}`);
-                if (combined.state === 'success') return true;
-                if (combined.state === 'failure' || combined.state === 'error') return false;
+              const MAX_RETRIES = 60; // 10 minutes
+              for (let i=0; i<MAX_RETRIES; i++) {
+                const { data: checkRuns } = await github.rest.checks.listForRef({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  ref: sha
+                });
+
+                // Filter out the current job/workflow
+                const relevantChecks = checkRuns.check_runs.filter(run => run.name !== 'automerge');
+
+                if (relevantChecks.length === 0) {
+                   console.log("No other checks found yet...");
+                   await new Promise(r => setTimeout(r, 10000));
+                   continue;
+                }
+
+                const pending = relevantChecks.filter(run => run.status !== 'completed');
+                const failed = relevantChecks.filter(run => run.status === 'completed' && !['success', 'neutral', 'skipped'].includes(run.conclusion));
+
+                if (failed.length > 0) {
+                  console.log(`Checks failed: ${failed.map(r => r.name).join(', ')}`);
+                  return false;
+                }
+
+                if (pending.length > 0) {
+                  console.log(`Waiting for checks: ${pending.map(r => r.name).join(', ')}`);
+                } else {
+                  console.log("All checks passed!");
+                  return true;
+                }
+
                 await new Promise(r => setTimeout(r, 10000));
               }
               return false;
             }
+            
             const ok = await waitForSuccess();
             if (!ok) throw new Error('Status checks did not finish successful in time');
 
