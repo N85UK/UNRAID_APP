@@ -7,7 +7,7 @@
   <MyIP/>
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
-  <Support>https://github.com/N85UK/UNRAID_APP/issues</Support>
+  <Support>https://github.com/N85UK/UNRAID_Apps/issues</Support>
   <Project>https://github.com/N85UK/UNRAID_Apps/tree/main/Apps/Ultimate_Messages</Project>
   <Overview>
     Ultimate Messages - Enterprise-grade unified multi-provider SMS platform combining Andrews &amp; Arnold and AWS SNS/Pinpoint with intelligent routing, automation, and team collaboration.
@@ -26,7 +26,7 @@
   <PostArgs/>
   <CPUset/>
   <DateInstalled></DateInstalled>
-  <DonateText>Support Development</DonateText>
+  <DonateText>If you find this useful, consider supporting development</DonateText>
   <DonateLink>https://github.com/sponsors/N85UK</DonateLink>
   <Requires>PostgreSQL 15+ and Redis 7+ databases configured and running</Requires>
   <Config Name="WebUI Port" Target="3000" Default="3000" Mode="tcp" Description="Web interface and API port" Type="Port" Display="always" Required="true" Mask="false">3000</Config>

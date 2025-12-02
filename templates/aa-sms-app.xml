@@ -7,7 +7,7 @@
   <MyIP/>
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
-  <Support>https://github.com/N85UK/UNRAID_APP/issues</Support>
+  <Support>https://github.com/N85UK/UNRAID_Apps/issues</Support>
   <Project>https://github.com/N85UK/UNRAID_Apps/tree/main/Apps/AA_SMS_App</Project>
   <Overview>
     AA SMS App - Andrews &amp; Arnold SMS Management Application
@@ -30,8 +30,8 @@
   <PostArgs/>
   <CPUset/>
   <DateInstalled></DateInstalled>
-  <DonateText/>
-  <DonateLink/>
+  <DonateText>If you find this useful, consider supporting development</DonateText>
+  <DonateLink>https://github.com/sponsors/N85UK</DonateLink>
   <Requires/>
   <Config Name="WebUI Port" Target="8282" Default="8282" Mode="tcp" Description="Web interface port" Type="Port" Display="always" Required="true" Mask="false">8282</Config>
   <Config Name="Data Storage" Target="/data" Default="/mnt/user/appdata/aa-sms-app" Mode="rw" Description="Database and application data storage" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/aa-sms-app</Config>
